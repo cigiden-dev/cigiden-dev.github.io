@@ -1,0 +1,175 @@
+@font-face {
+  font-family: 'Helvetica Neue Bold';
+  src: url('./font/HelveticaNeueBold.woff') format('woff');
+ }
+
+ @font-face {
+  font-family: 'Helvetica Neue Regular';
+  src: url('./font/HelveticaNeueLTProRoman.woff') format('woff');
+ }
+
+ @font-face {
+  font-family: 'Futura LT Bold';
+  src: url('./font/FuturaLT-Bold.woff') format('woff');
+}
+ 
+.bg-azul{
+  background-color: #005F80;
+  height: 120vh;
+}
+
+.bg-cordillera{
+  background-image: url(../img/bg-cordillera.jpg);
+  height: 120vh;
+  background-position: center;
+  background-size: cover;
+}
+
+.container {
+  max-width: 960px;
+}
+
+h1 {
+  font-family: 'Futura LT Bold';
+  font-size: 1.75rem;
+}
+
+h2 {
+  font-family: 'Helvetica Neue Bold';
+  font-size: 1.5rem;
+}
+
+h3{
+  font-family: 'Helvetica Neue Regular';
+  font-size: 1rem;
+}
+
+.naranjo{
+  background-color: #F0501D !important;
+  border-color: #F0501D !important;
+  border-radius: 2rem;
+  font-family: 'Futura LT Bold';
+  font-size: 0.8rem;
+}
+
+.bg-lava{
+  background-image: url(../img/bg-lava.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.bg-agua{
+  background-image: url(../img/bg-agua.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.bg-tierra{
+  background-image: url(../img/bg-tierra.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.cuadricula > div {
+  height: 20vw;
+  padding: 30px;
+}
+
+.cuadricula > div > h1 {
+  font-size: 1.35rem;
+}
+
+.menu-cuadricula{
+  padding: 0px 10vw 0px 10vw;
+  margin-top: -40vh;
+}
+
+.bg-rojo{
+  background-color: #F0501D;
+}
+
+.bg-naranjo{
+ background-color: #E38200;
+}
+
+.bg-amarillo{
+ background-color: #FAD620;
+}
+
+/*
+ * Custom translucent site header
+ */
+
+.site-header {
+  background-color: rgba(0, 0, 0, .85);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
+}
+.site-header a {
+  color: #999;
+  transition: ease-in-out color .15s;
+}
+.site-header a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+/*
+ * Dummy devices (replace them with your own or something else entirely!)
+ */
+
+.product-device {
+  position: absolute;
+  right: 10%;
+  bottom: -30%;
+  width: 300px;
+  height: 540px;
+  background-color: #333;
+  border-radius: 21px;
+  -webkit-transform: rotate(30deg);
+  transform: rotate(30deg);
+}
+
+.product-device::before {
+  position: absolute;
+  top: 10%;
+  right: 10px;
+  bottom: 10%;
+  left: 10px;
+  content: "";
+  background-color: rgba(255, 255, 255, .1);
+  border-radius: 5px;
+}
+
+.product-device-2 {
+  top: -25%;
+  right: auto;
+  bottom: 0;
+  left: 5%;
+  background-color: #e5e5e5;
+}
+
+
+/*
+ * Extra utilities
+ */
+
+.border-top { border-top: 1px solid #e5e5e5; }
+.border-bottom { border-bottom: 1px solid #e5e5e5; }
+
+.box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
+
+.flex-equal > * {
+  -ms-flex: 1;
+  -webkit-box-flex: 1;
+  flex: 1;
+}
+@media (min-width: 768px) {
+  .flex-md-equal > * {
+    -ms-flex: 1;
+    -webkit-box-flex: 1;
+    flex: 1;
+  }
+}
+
+.overflow-hidden { overflow: hidden; }
