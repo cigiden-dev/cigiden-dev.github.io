@@ -3,12 +3,12 @@
   src: url('./font/HelveticaNeueBold.woff') format('woff');
  }
 
- @font-face {
+@font-face {
   font-family: 'Helvetica Neue Regular';
   src: url('./font/HelveticaNeueLTProRoman.woff') format('woff');
  }
 
- @font-face {
+@font-face {
   font-family: 'Futura LT Bold';
   src: url('./font/FuturaLT-Bold.woff') format('woff');
 }
@@ -16,7 +16,13 @@
 .bg-azul{
   background-color: #005F80;
   height: 120vh;
+  z-index: 5;
 }
+
+@font-face {
+  font-family: 'Futura LT Regular';
+  src: url('./font/FuturaLT.woff') format('woff');
+  }
 
 .bg-cordillera{
   background-image: url(../img/bg-cordillera.jpg);
@@ -79,9 +85,34 @@ h3{
   font-size: 1.35rem;
 }
 
+.fuentes h1{
+  color: #38415A;
+  font-size: 1.25rem;
+}
+
+.conoce h1{
+  color: #38415A;
+  font-size: 1.5rem;
+}
+
+.divisor{
+  margin-top: -45vh;
+  margin-bottom: ;
+  z-index: 1;
+}
+
+.divisor-2{
+  margin-top: -25vh !important;
+}
+
+.cuadricula-2{
+  height: 75vh;
+}
+
 .menu-cuadricula{
   padding: 0px 10vw 0px 10vw;
   margin-top: -40vh;
+  z-index: 10;
 }
 
 .bg-rojo{
@@ -100,12 +131,36 @@ h3{
   background-color: #E38200;
  }
 
+.bg-plomo{
+  background-color: #EBEBEB;
+}
+
 .footer-text > div > h2 {
   font-size: 0.9rem;
 }
 
 .footer-text > div > h3 {
   font-size: 0.75rem;
+}
+
+h4{
+  font-family: 'Futura LT Bold';
+  font-size: 0.8rem;
+  color: #F0501D;
+}
+
+p{
+  font-family: 'Futura LT Regular';
+  font-size: 0.75rem;
+  color: #38415A;
+}
+
+#colaboradores > div {
+  margin-top: 25px;
+}
+
+#colaboradores > div > p {
+  margin-bottom: 25px;
 }
 
 /*
