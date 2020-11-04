@@ -96,6 +96,18 @@ h3{
  background-color: #FAD620;
 }
 
+.bg-amarillo-2{
+  background-color: #E38200;
+ }
+
+.footer-text > div > h2 {
+  font-size: 0.9rem;
+}
+
+.footer-text > div > h3 {
+  font-size: 0.75rem;
+}
+
 /*
  * Custom translucent site header
  */
