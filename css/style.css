@@ -16,7 +16,6 @@
 .bg-azul{
   background-color: #005F80;
   height: 120vh;
-  z-index: 5;
 }
 
 @font-face {
@@ -111,8 +110,8 @@ h3{
 
 .menu-cuadricula{
   padding: 0px 10vw 0px 10vw;
-  margin-top: -40vh;
-  z-index: 10;
+  margin-top: -44vh;
+  z-index: 2;
 }
 
 .bg-rojo{
@@ -121,6 +120,17 @@ h3{
 
 .bg-naranjo{
  background-color: #E38200;
+}
+
+.dropdown-item{
+  color: #38415A;
+  font-family: 'Futura LT Bold';
+  font-size: 0.7rem;
+  padding: 0.5rem 1.5rem;
+}
+
+.dropdown-menu{
+  left: 20px !important;
 }
 
 .bg-amarillo{
@@ -161,6 +171,26 @@ p{
 
 #colaboradores > div > p {
   margin-bottom: 25px;
+}
+
+.menu-derecha .list-group-item-action {
+  background-color: transparent;
+  border-color: transparent;
+  color: #38415A;
+  font-family: 'Futura LT Bold';
+  font-size: 0.7rem;
+}
+
+.texto-blanco .list-group-item-action{
+  color: #fff !important;
+}
+
+.paginas-medias{
+  height: 60vh !important;
+}
+
+.activo {
+  text-decoration: underline;
 }
 
 /*
