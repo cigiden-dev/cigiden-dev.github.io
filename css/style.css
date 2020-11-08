@@ -324,6 +324,22 @@ p{
   transition: background-image 0.5s ease-in-out;
 }
 
+.bg-load-2{
+  background-image: url(../img/bg-mapa/mapa-2.jpg);
+}
+
+.bg-load-3{
+  background-image: url(../img/bg-mapa/mapa-3.jpg);
+}
+
+.bg-load-4{
+  background-image: url(../img/bg-mapa/mapa-4.jpg);
+}
+
+.bg-load-5{
+  background-image: url(../img/bg-mapa/mapa-5.jpg);
+}
+
 .icono-amenazas{
   height: 50px;
   padding-right: 20px;
