@@ -218,6 +218,15 @@ p{
   color: #38415A;
   font-family: 'Futura LT Bold';
   font-size: 0.7rem;
+  padding-right: 0px !important;
+}
+
+.menu-derecha{
+  padding-right: 0px !important;
+}
+
+.padding-right{
+  padding-right: 0px !important;
 }
 
 .texto-blanco .list-group-item-action{
