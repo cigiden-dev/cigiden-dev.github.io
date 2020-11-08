@@ -18,6 +18,10 @@
   height: 120vh;
 }
 
+.bg-azul-2{
+  background-color: #005F80;
+}
+
 @font-face {
   font-family: 'Futura LT Regular';
   src: url('./font/FuturaLT.woff') format('woff');
@@ -218,10 +222,6 @@ p{
 
 .texto-blanco .list-group-item-action{
   color: #fff !important;
-}
-
-.paginas-medias{
-  height: 30vh !important;
 }
 
 .activo {
