@@ -73,20 +73,79 @@
 
     <div class="container position-relative overflow-hidden">
         <div class="row my-3"> 
-            <div class="col-sm-12 my-5 titulo">
-                    <h1>Mapa Interactivo</h1>
-            </div>
-            <div class="col-sm-12 my-1 text-left p-descripcion">
-                    <p></p>
+            <div class="col-sm-5 my-5 titulo">
+                    <h1>Mapa digital de amenazas
+                        y desastres de Chile</h1>
             </div>
         </div>
     </div>
 
-    <div class="container position-relative overflow-hidden text-center my-5">
-
+    <div class="container position-relative overflow-hidden text-center mb-5">
+    
+        <div class="row text-left subtitulo">
+            <div class="col-sm-5">
+                <h2>Mapa multimedial intercultural de relatos que contempla un mapa ilustrado e interactivo ampliable de Chile, con distintos puntos representativos de eventos históricos y emblemáticos de diversas amenazas naturales y desastres ocurridos en el país.</h2>
+            </div>
+            <div class="col-sm-2"></div>
+            <div class="col-sm-5">
+                <h2>En cada uno de esos puntos se despliega material con información entregada desde dos perspectivas: técnica-científica y de comunidades tradicionales (pescadores, agricultores, artesanos) y/o pueblos indígenas.</h2>
+            </div>
+        </div>
+        <div class="row text-left">
+            <div class="col-sm-5 mt-5">
+                <h1 class="titulo-2">Tipos de Amenazas:</h1>
+        </div>
+        </div>
+        <div class="row text-left">
+            <div class="col-sm-5 p-descripcion mt-5">
+                <span class="volcanes-txt"><img class="img-fluid icono-amenazas" src="../img/bg-mapa/volcanes.svg">Erupciones volcánicas</span>
+                <p class="my-4 ">Las erupciones volcánicas –explosiones o emanaciones de lava, cenizas y gases tóxicos desde el interior de la Tierra–, se producen por el calentamiento del magma. Al igual que una botella de gaseosa, si la batimos, el gas que tiene dentro comienza un proceso de presión. Al abrirla, el contenido sale expulsado con violencia mojando todo alrededor. En una erupción volcánica ocurre algo similar, producto de procesos naturales, el líquido (magma) más gases tóxicos, piedras y otros, sale expulsado periódicamente de su interior. </p>
+            </div>
+            <div class="col-sm-2"></div>
+            <div class="col-sm-5 p-descripcion mt-5">
+                <span class="aluviones-txt"><img class="img-fluid icono-amenazas" src="../img/bg-mapa/aluviones.svg">Aluviones</span>
+                <p class="my-4 ">Un aluvión o flujos de barro, es una mezcla entre el agua que cae en forma de lluvia y el material que rellena los cauces o quebradas, es decir, la tierra y cualquier otro material que encuentre a su paso. Esta mezcla, por efecto de gravedad, se desplaza pendiente abajo, donde usualmente se ubican la zonas urbanas afectándola de diferentes maneras. Los aluviones ocurren por fenómenos climático, propios de la tierra pero también por el impacto de la actividad humana sobre las quebradas.
+                </p>
+            </div>
+            <div class="col-sm-5 p-descripcion mt-5">
+                <span class="terremotos-txt"><img class="img-fluid icono-amenazas" src="../img/bg-mapa/terremotos.svg">Terremotos</span>
+                <p class="my-4 ">Un terremoto es un movimiento intenso de la superficie terrestre, causado por la brusca liberación de energía acumulada al interior de la Tierra, que esta conformada por distintas capas o “placas”. Estas placas conocidas como “tectónicas” se mueven para acomodarse y periódicamente “chocan” entre sí, propagando “ondas” por toda la superficie terrestre y por debajo de ella, provocando desde grietas en la superficie, sacudidas, vibraciones, hasta deslizamiento de tierra, réplicas e incluso tsunamis, también conocidos como maremotos.
+                </p>
+            </div>
+            <div class="col-sm-2"></div>
+            <div class="col-sm-5 p-descripcion mt-5">
+                <span class="tsunamis-txt"><img class="img-fluid icono-amenazas" src="../img/bg-mapa/tsunamis.svg">Tsunamis</span>
+                <p class="my-4 ">Un tsunami es una serie de olas de periodos muy largos, que pueden alcanzar alturas cerca de la costa de entre 1 y 10 metros. En Chile, los tsunamis son generalmente producidos por terremotos que logran “alterar” el océano, generando una deformación de la superficie del mar que luego se propaga en todas las direcciones. Los tsunamis pueden viajar a gran velocidad en la mitad del océano (como un avión) pero con alturas de ola pequeñas. Sin embargo, cuando un tsunami se acerca a la costa, su velocidad disminuye (como un auto) y su altura aumenta pudiendo inundar grandes extensiones y producir daños. Los tsunamis también se generan por derrumbes costeros o submarinos, y asteroides que caen en el océano.</p>
+            </div>
+        </div>
+        <div class="row text-center mt-5 mb-3">
+            <div class="col-sm-12">
+                <h1 class="titulo-2">¡Comienza a explorar!<img class="img-fluid comienza-explorar" src="../img/bg-mapa/mano.svg"></h1>
+            </div>
+            
+        </div>
     </div>
 
+    <div class="bg-mapa">
+        <div class="container">
+            <div class="row">
+                <div id="amenazas-listado" class="card my-5">
+                    <div class="card-header todas-amenazas">
+                        Listado amenazas
+                    </div>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item volcanes"><img class="img-fluid icono-amenazas" src="../img/bg-mapa/volcanes.svg">Erupciones volcánicas</li>
+                      <li class="list-group-item aluviones"><img class="img-fluid icono-amenazas" src="../img/bg-mapa/aluviones.svg">Aluviones</li>
+                      <li class="list-group-item terremotos"><img class="img-fluid icono-amenazas" src="../img/bg-mapa/terremotos.svg">Terremotos</li>
+                      <li class="list-group-item tsunamis"><img class="img-fluid icono-amenazas" src="../img/bg-mapa/tsunamis.svg">Tsunamis</li>
+                    </ul>
+                  </div>    
 
+            </div>
+            
+        </div>
+
+    </div>
 
     </div>
     <footer class="position-relative overflow-hidden text-center text-white">
@@ -117,6 +176,7 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="../js/jquery-3.5.1.slim.min.js"></script>
+    <script src="../js/script.js"></script>
     <script>window.jQuery || document.write('<script src="../js/jquery-slim.min.js"><\/script>')</script>
     <script src="../js/popper.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>

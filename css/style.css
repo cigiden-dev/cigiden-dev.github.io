@@ -314,3 +314,69 @@ p{
 }
 
 .overflow-hidden { overflow: hidden; }
+
+.bg-mapa{
+  background-image: url(../img/bg-mapa/mapa-1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 1000px;
+  -webkit-transition: background-image 0.5s ease-in-out;
+  transition: background-image 0.5s ease-in-out;
+}
+
+.icono-amenazas{
+  height: 50px;
+  padding-right: 20px;
+}
+
+#amenazas-listado {
+  font-family: 'Futura LT Bold';
+}
+
+.volcanes, .volcanes-txt{
+  color: #F0501D;
+}
+
+.aluviones, .aluviones-txt{
+ color: #FAD620;
+}
+
+.terremotos, .terremotos-txt{
+  color: #005F80;
+}
+
+.tsunamis, .tsunamis-txt{
+  color: #E38200;
+}
+
+
+.list-group-item, .todas-amenazas{
+  cursor: pointer;
+  -webkit-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+
+}
+
+.list-group-item:hover {
+  opacity: 0.5;
+}
+
+.subtitulo > div > h2{
+  font-family: 'Futura LT Bold';
+  color: #F0501D;
+  font-size: 1rem;
+}
+
+.titulo-2{
+  color: #38415A;
+  font-size: 1.25rem;
+}
+
+.p-descripcion span{
+  font-family: 'Futura LT Bold';
+}
+
+.comienza-explorar {
+  height: 50px;
+  margin-left: 20px;
+}
