@@ -319,6 +319,7 @@ p{
   background-image: url(../img/bg-mapa/mapa-1.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: right;
   height: 1000px;
   -webkit-transition: background-image 0.5s ease-in-out;
   transition: background-image 0.5s ease-in-out;
