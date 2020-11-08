@@ -404,6 +404,10 @@ p{
   padding-top: 5px;
 }
 
+.escala > div > label{
+  font-size: 0.75rem;
+}
+
 .social-media-txt h2{
   text-align: center;
   width: 100%;
