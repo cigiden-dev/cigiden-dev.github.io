@@ -397,3 +397,18 @@ p{
   height: 50px;
   margin-left: 20px;
 }
+
+.social-media{
+  height: 40px;
+  margin: 5px;
+  padding-top: 5px;
+}
+
+.social-media-txt h2{
+  text-align: center;
+  width: 100%;
+}
+
+.logo-white{
+  height: 80px;
+}
