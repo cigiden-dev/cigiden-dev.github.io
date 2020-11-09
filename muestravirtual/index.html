@@ -23,7 +23,7 @@
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
 
-    <title>TsunamiLab - Territorio en Movimiento</title>
+    <title>Muestra Virtual - Territorio en Movimiento</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/product/">
 
@@ -71,24 +71,32 @@
 
 
 
-    <div class="container position-relative overflow-hidden">
+ <div class="container position-relative overflow-hidden">
         <div class="row my-3"> 
-            <div class="col-sm-12 my-5 titulo">
-                    <h1>¿Qué es TsunamiLab?</h1>
+            <div class="col-sm-12 my-5 titulo p-descripcion">
+                    <h1>Módulo 6: Recorrido Virtual 3D</h1>
+
+                    <div class="dropdown show text-left mt-4 ">
+                        <a class="btn btn-secondary dropdown-toggle naranjo px-5 py-3" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Selecciona Muestra
+                        </a>
+                      
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                          <div class="dropdown-item click-muestra-1">Recorrido 1</div>
+                        </div>
+                      </div>   
+
             </div>
-            <div class="col-sm-12 my-1 text-left p-descripcion">
-                    <p>Como plataforma educacional, permite al usuario observar las características del tsunami de forma interactiva y flexible - de la misma manera que en un laboratorio - apoyándose en información contextual del evento seleccionado. Como herramienta de apoyo para la toma de decisiones frente a una alerta, permite al usuario adquirir un entendimiento más claro sobre el fenómeno, pues permite experimentar con escenarios posibles y, además, observar el mismo escenario desde distintos lugares del planeta. A su vez, permite comparar distintos escenarios en una plataforma de visualización atractiva e interactiva.</p>
+            <div id="muestra-1" class="container p-descripcion mb-5">
+                <h1 class="mb-5">Recorrido Virtual 1:</h1>
+                <div class="col-sm-12"><iframe src="https://portal.furioos.com/embed/963.058?whiteLabel=true&hideTitle=true&autoRun=true" width="100%" height="600px" allowfullscreen="true" style="border: none;"></iframe>
+                </div>
             </div>
+
+            
+        
         </div>
     </div>
-
-    <div class="container position-relative overflow-hidden text-center my-5">
-        <div>
-            <a href="http://tsunamilab.cl/" target="_blank"><img class="img-fluid" src="../img/tsunami-lab.jpg" alt=""></a>
-        </div>
-    </div>
-
-
 
     </div>
     <footer class="position-relative overflow-hidden text-center text-white">
