@@ -445,4 +445,5 @@ canvas{
   outline: none; 
   border: none; 
   overflow: hidden;
+  cursor: pointer;
 }
