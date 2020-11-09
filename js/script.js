@@ -60,7 +60,7 @@ $("#canvas").on("tap",function(){
 
 document.addEventListener('play', function(e){
     var audios = document.getElementsByTagName('audio');
-    var videos = document.getElementsByTagName('video');
+    var videos = document.getElementsByClassName('video-hablando');
     for(var i = 0, len = audios.length; i < len;i++){
         if(audios[i] != e.target){
             audios[i].pause();
