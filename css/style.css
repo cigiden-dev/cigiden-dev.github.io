@@ -374,7 +374,7 @@ p{
 
 }
 
-.list-group-item:hover {
+#amenazas-listado > ul > .list-group-item:hover {
   opacity: 0.5;
 }
 
@@ -408,6 +408,10 @@ p{
   font-size: 0.75rem;
 }
 
+.nombre-investigador{
+  margin-bottom: 0px;
+}
+
 .social-media-txt h2{
   text-align: center;
   width: 100%;
@@ -415,4 +419,20 @@ p{
 
 .logo-white{
   height: 80px;
+}
+
+audio{
+  height: 25px;
+  outline: none;
+}
+
+.preguntas-tsunami > div > .list-group-item{
+  color: #F0501D;
+  font-family: 'Futura LT Bold';
+  font-size: 0.7rem;
+}
+
+.preguntas-tsunami > div > .list-group-item.active{
+  background-color: #005F80;
+  color: #fff;
 }

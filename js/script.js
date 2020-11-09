@@ -28,3 +28,26 @@ $( ".tsunamis" ).click(function() {
     $(".aluviones, .terremotos, .volcanes ").css('opacity','0.5');
     $(this).css('opacity','1');
 });
+
+$( ".click-valparaiso" ).click(function() {    
+    $( "#talcahuano, #cartagena, #iquique").hide();
+    $( "#valparaiso" ).show();
+});
+
+$( ".click-cartagena" ).click(function() {
+    $( "#talcahuano, #valparaiso, #iquique").hide();
+    $( "#cartagena" ).show();
+});
+
+
+$( ".click-talcahuano" ).click(function() {
+    $( "#valparaiso, #cartagena, #iquique").hide();
+    $( "#talcahuano" ).show();
+});
+
+$( ".click-iquique" ).click(function() {
+    $( "#talcahuano, #cartagena, #valparaiso").hide();
+    $( "#iquique" ).show();
+});
+
+
