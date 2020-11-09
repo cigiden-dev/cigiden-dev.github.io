@@ -546,6 +546,7 @@
             
 
             window.addEventListener( 'resize', onWindowResize, false );
+            
 
 
         }
@@ -556,18 +557,21 @@
             camera.updateProjectionMatrix();
 
             renderer.setSize( window.innerWidth, window.innerHeight );
+        controls.addEventListener( 'change', alert("HOLA") );
 
         }
 
         //
 
         function animate() {
-
+            
             requestAnimationFrame( animate );
 
             renderer.render( scene, camera );
 
+
         }
+    
 
     var video = document.getElementById( 'valparaiso-tsunami' );
     video.play();

@@ -52,7 +52,10 @@ $( ".click-iquique" ).click(function() {
 
 $( "#canvas" ).click(function() {
     $(".container-icono-3d").hide(1500);
+});
 
+$("#canvas").on("tap",function(){
+    $(".container-icono-3d").hide(1500);
 });
 
 
