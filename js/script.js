@@ -50,4 +50,10 @@ $( ".click-iquique" ).click(function() {
     $( "#iquique" ).show();
 });
 
+$( "#canvas" ).click(function() {
+    $(".container-icono-3d").hide(1500);
+
+});
+
+
 

@@ -100,7 +100,17 @@
                 <div class="col-sm-8 my-1 text-left p-descripcion">
                     <h1 class="mb-3">Valparaíso</h1>
                     <p>Esta simulación de tsunami proyectada sobre un relieve 3D a escala de la bahía de Valparaíso, muestra lo que ocurriría si un terremoto y posterior tsunami –tan grande como el que ocurrió en la zona central en 1730– afectase hoy a la ciudad de Valparaíso.</p>
-                    <div id="canvas" class="" style=""></div>
+                    <div id="canvas" class="" style="">
+                        <div class="container-icono-3d">
+                            <div class="interact-icon-360-container" style="visibility: visible;">
+                                <div class="animation-wrapper">
+                                  <img class="icon-360" src="flecha.png">
+                                  <img class="hand-360 wobble-hor-bottom" src="mano.png">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
                 <div class="col-sm-12 my-5">
                     <h1 class="my-5">Preguntas</h1>
@@ -371,6 +381,13 @@
     <video id="valparaiso-tsunami" loop autoplay muted crossOrigin="anonymous" playsinline style="display: none;">
         <source src="textures/valparaiso-v2.mp4" type="video/mp4">
     </video>
+
+    <div class="interact-icon-360-container" style="visibility: visible;">
+        <div class="animation-wrapper">
+          <img class="icon-360" src="flecha.png">
+          <img class="hand-360 wobble-hor-bottom" src="mano.png">
+        </div>
+    </div>
 
 
     <!-- Bootstrap core JavaScript
