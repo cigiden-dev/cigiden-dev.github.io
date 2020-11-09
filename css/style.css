@@ -436,3 +436,13 @@ audio{
   background-color: #005F80;
   color: #fff;
 }
+
+canvas{
+  position: relative;
+  height: 395px !important;
+  width: 100% !important;
+  z-index: 0;
+  outline: none; 
+  border: none; 
+  overflow: hidden;
+}

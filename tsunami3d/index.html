@@ -100,7 +100,7 @@
                 <div class="col-sm-8 my-1 text-left p-descripcion">
                     <h1 class="mb-3">Valparaíso</h1>
                     <p>Esta simulación de tsunami proyectada sobre un relieve 3D a escala de la bahía de Valparaíso, muestra lo que ocurriría si un terremoto y posterior tsunami –tan grande como el que ocurrió en la zona central en 1730– afectase hoy a la ciudad de Valparaíso.</p>
-                    <img class="img-fluid" src="../img/tsunami.jpg" alt="">
+                    <div id="canvas" class="" style=""></div>
                 </div>
                 <div class="col-sm-12 my-5">
                     <h1 class="my-5">Preguntas</h1>
@@ -368,6 +368,10 @@
     </div>
     </footer>
 
+    <video id="valparaiso-tsunami" loop autoplay muted crossOrigin="anonymous" playsinline style="display: none;">
+        <source src="textures/valparaiso-v2.mp4" type="video/mp4">
+    </video>
+
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
@@ -378,6 +382,180 @@
     <script src="../js/popper.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/holder.min.js"></script>
+
+    <script type="module">
+
+        import * as THREE from './build/three.module.js';
+
+        import { OrbitControls } from './jsm/controls/OrbitControls.js';
+        import { GLTFLoader } from './jsm/loaders/GLTFLoader.js';
+        import { DRACOLoader } from './jsm/loaders/DRACOLoader.js';
+        import { RGBELoader } from './jsm/loaders/RGBELoader.js';
+        import { RoughnessMipmapper } from './jsm/utils/RoughnessMipmapper.js';
+
+        var canvas, stats, controls;
+        var video, audio, videotexture, material;
+        var camera, scene, renderer;
+
+        window.onload = function() {
+
+            init();
+            animate();
+        };
+
+
+        function init() {
+
+            canvas = document.createElement( 'div' );
+            var elem = document.getElementById('canvas');
+            elem.appendChild( canvas );
+
+            camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 0.25, 20 );
+            camera.position.set( 7, 4, 7 );
+
+            scene = new THREE.Scene();
+
+            video = document.getElementById( 'valparaiso-tsunami' );
+
+
+            videotexture = new THREE.VideoTexture( video );
+
+            videotexture.format = THREE.RGBFormat;
+            videotexture.encoding = THREE.sRGBEncoding;
+            videotexture.wrapS = videotexture.wrapT = THREE.ClampToEdgeWrapping;
+            videotexture.magFilter = THREE.LinearFilter;
+            videotexture.mapping = THREE.EquirectangularReflectionMapping;
+
+            var materialVideo = new THREE.MeshBasicMaterial( { map: videotexture } )
+
+
+            new RGBELoader()
+                .setDataType( THREE.UnsignedByteType )
+                .setPath( 'textures/equirectangular/' )
+                .load( 'spot1Lux.hdr', function ( texture ) {
+
+                    var envMap = pmremGenerator.fromEquirectangular( texture ).texture;
+                    pmremGenerator.dispose();
+                    
+                    scene.environment = envMap;
+
+                    // model
+
+                    var roughnessMipmapper = new RoughnessMipmapper( renderer );
+
+                    // Instantiate a loader
+                    var loader = new GLTFLoader();
+
+                    // Optional: Provide a DRACOLoader instance to decode compressed mesh data
+                    var dracoLoader = new DRACOLoader();
+                    dracoLoader.setDecoderPath( './js/libs/draco/' );
+                    loader.setDRACOLoader( dracoLoader );
+
+                    // Load a glTF resource
+                    loader.load(
+                        // resource URL
+                        'models/gltf/Tsunami/valparaiso.gltf',
+                        // called when the resource is loaded
+                        function ( gltf ) {
+
+                            gltf.scene.children[0].material = materialVideo;
+                            scene.add( gltf.scene );
+
+                            var mesh = gltf.scene;
+
+                            gltf.animations; // Array<THREE.AnimationClip>
+                            gltf.scene; // THREE.Group
+                            gltf.scenes; // Array<THREE.Group>
+                            gltf.cameras; // Array<THREE.Camera>
+                            gltf.asset; // Object
+
+                        },
+                        // called while loading is progressing
+                        function ( xhr ) {
+
+                            console.log( ( xhr.loaded / xhr.total * 100 ) + '% loaded' );
+
+                        },
+                        // called when loading has errors
+                        function ( error ) {
+
+                            console.log( 'An error happened' );
+
+                        }
+                    );
+
+
+                } );
+
+            renderer = new THREE.WebGLRenderer( { antialias: true , alpha: true} );
+            renderer.setPixelRatio( window.devicePixelRatio );
+            renderer.setSize( window.innerWidth, window.innerHeight );
+            renderer.toneMapping = THREE.ACESFilmicToneMapping;
+            renderer.outputEncoding = THREE.sRGBEncoding;
+            canvas.appendChild( renderer.domElement );
+
+            var pmremGenerator = new THREE.PMREMGenerator( renderer );
+            pmremGenerator.compileEquirectangularShader();
+
+            controls = new OrbitControls( camera, renderer.domElement );
+            controls.target.set( -0.5, -0.5, - 0.2 );
+            controls.enableDamping = false;
+            controls.dampingFactor = 0.1;
+            controls.rotateSpeed = 0.2;
+            controls.zoomSpeed = 0.5;
+            controls.panSpeed = 0.1;
+            controls.maxDistance = 5; 
+            controls.minDistance = 2; 
+            controls.maxPolarAngle = 1.1; 
+            controls.minPolarAngle  = -1.1; 
+            camera.position.set( 100, 35, 145 );
+
+            function myFunction(x) {
+            if (x.matches) { // If media query matches
+
+                controls.maxDistance = 15; 
+                controls.minDistance = 9; 
+                controls.update();
+                camera.position.set( 8, 8, 8 );
+            } else {
+                controls.update();
+            }
+            }
+
+            var x = window.matchMedia("(max-width: 700px)")
+            myFunction(x) // Call listener function at run time
+            x.addListener(myFunction) // Attach listener function on state changes
+
+            
+
+            window.addEventListener( 'resize', onWindowResize, false );
+
+
+        }
+
+        function onWindowResize() {
+
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+
+            renderer.setSize( window.innerWidth, window.innerHeight );
+
+        }
+
+        //
+
+        function animate() {
+
+            requestAnimationFrame( animate );
+
+            renderer.render( scene, camera );
+
+        }
+
+    var video = document.getElementById( 'valparaiso-tsunami' );
+    video.play();
+    </script>
+
   
 
 </body></html>
