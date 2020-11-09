@@ -58,5 +58,15 @@ $("#canvas").on("tap",function(){
     $(".container-icono-3d").hide(1500);
 });
 
+document.addEventListener('play', function(e){
+    var audios = document.getElementsByTagName('audio');
+    console.log("1");
+    for(var i = 0, len = audios.length; i < len;i++){
+        if(audios[i] != e.target){
+            audios[i].pause();
+            audios[i].currentTime = 0;
+        }
+    }
+}, true);
 
 
