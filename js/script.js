@@ -68,24 +68,27 @@ function pauseVideosAudios(multimedia) {
 }
 
 $(document).ready(function(){
-    document.addEventListener('play', function(e){      
-        var audios = document.getElementsByTagName('audio');
-        var videos = document.getElementsByClassName('video-hablando');
-        for(var i = 0, len = audios.length; i < len;i++){
-            if(audios[i] != e.target){
-                audios[i].pause();
-                audios[i].currentTime = 0;
+    setTimeout(function(){ 
+        document.addEventListener('play', function(e){      
+            var audios = document.getElementsByTagName('audio');
+            var videos = document.getElementsByClassName('video-hablando');
+            for(var i = 0, len = audios.length; i < len;i++){
+                if(audios[i] != e.target){
+                    audios[i].pause();
+                    audios[i].currentTime = 0;
+                }
             }
-        }
-        for(var i = 0, len = videos.length; i < len;i++){
-            if(videos[i] != e.target){
-                videos[i].pause();
-                videos[i].currentTime = 0;
+            for(var i = 0, len = videos.length; i < len;i++){
+                if(videos[i] != e.target){
+                    videos[i].pause();
+                    videos[i].currentTime = 0;
+                }
             }
-        }
-        
-    }, true);
-      });
+            
+        }, true);
+     }, 200);
+    
+});
 
 
 
