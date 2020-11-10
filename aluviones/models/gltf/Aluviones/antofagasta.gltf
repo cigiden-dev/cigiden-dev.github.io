@@ -23,16 +23,16 @@
                 0.7071067094802856
             ],
             "scale" : [
-                0.0010135482298210263,
-                0.0010135483462363482,
-                0.0010135483462363482
+                0.0010233721695840359,
+                0.0010233722859993577,
+                0.0010233722859993577
             ]
         }
     ],
     "materials" : [
         {
             "doubleSided" : true,
-            "name" : "TerrainNodeMaterial.001",
+            "name" : "TerrainNodeMaterial.007",
             "pbrMetallicRoughness" : {
                 "baseColorFactor" : [
                     1,
@@ -51,7 +51,7 @@
     ],
     "meshes" : [
         {
-            "name" : "TerrainNodeMesh.001",
+            "name" : "TerrainNodeMesh.007",
             "primitives" : [
                 {
                     "attributes" : {
@@ -81,63 +81,63 @@
         {
             "bufferView" : 0,
             "componentType" : 5126,
-            "count" : 5704,
+            "count" : 5951,
             "max" : [
-                3385.9677734375,
-                3642.888916015625,
+                3664.2666015625,
+                3541.675048828125,
                 0
             ],
             "min" : [
-                -3385.9677734375,
-                -3642.888916015625,
-                -1768
+                -3664.2666015625,
+                -3541.675048828125,
+                -1353
             ],
             "type" : "VEC3"
         },
         {
             "bufferView" : 1,
             "componentType" : 5126,
-            "count" : 5704,
+            "count" : 5951,
             "type" : "VEC3"
         },
         {
             "bufferView" : 2,
             "componentType" : 5126,
-            "count" : 5704,
+            "count" : 5951,
             "type" : "VEC2"
         },
         {
             "bufferView" : 3,
             "componentType" : 5123,
-            "count" : 31536,
+            "count" : 33180,
             "type" : "SCALAR"
         }
     ],
     "bufferViews" : [
         {
             "buffer" : 0,
-            "byteLength" : 68448,
+            "byteLength" : 71412,
             "byteOffset" : 0
         },
         {
             "buffer" : 0,
-            "byteLength" : 68448,
-            "byteOffset" : 68448
+            "byteLength" : 71412,
+            "byteOffset" : 71412
         },
         {
             "buffer" : 0,
-            "byteLength" : 45632,
-            "byteOffset" : 136896
+            "byteLength" : 47608,
+            "byteOffset" : 142824
         },
         {
             "buffer" : 0,
-            "byteLength" : 63072,
-            "byteOffset" : 182528
+            "byteLength" : 66360,
+            "byteOffset" : 190432
         }
     ],
     "buffers" : [
         {
-            "byteLength" : 245600,
+            "byteLength" : 256792,
             "uri" : "antofagasta.bin"
         }
     ]
