@@ -107,13 +107,11 @@
                             </div>
                         </div>
                     </div>
-
+<!-- 
                     <video id="chaiten-multiamenaza" loop autoplay muted crossOrigin="anonymous" playsinline style="display: none;">
                         <source src="chaiten-multiamenaza.mp4" type="video/mp4">
-                    </video>
-                    <video width="100%" height="auto" autoplay loop style="outline: none;" >
-                        <source src="multiamenaza-simulacion.mp4" type="video/mp4">                    
-                    </video>
+                    </video> -->
+
                 </div>
                 <div class="col-sm-12 my-5">
                     <h1 class="my-5">Preguntas</h1>
@@ -252,17 +250,17 @@
 
             scene = new THREE.Scene();
 
-            video = document.getElementById( 'chaiten-multiamenaza' );
+            // video = document.getElementById( 'chaiten-multiamenaza' );
             
-            videotexture = new THREE.VideoTexture( video );
+            // videotexture = new THREE.VideoTexture( video );
 
-            videotexture.format = THREE.RGBFormat;
-            videotexture.encoding = THREE.sRGBEncoding;
-            videotexture.wrapS = videotexture.wrapT = THREE.ClampToEdgeWrapping;
-            videotexture.magFilter = THREE.LinearFilter;
-            videotexture.mapping = THREE.EquirectangularReflectionMapping;
+            // videotexture.format = THREE.RGBFormat;
+            // videotexture.encoding = THREE.sRGBEncoding;
+            // videotexture.wrapS = videotexture.wrapT = THREE.ClampToEdgeWrapping;
+            // videotexture.magFilter = THREE.LinearFilter;
+            // videotexture.mapping = THREE.EquirectangularReflectionMapping;
 
-            var materialVideo = new THREE.MeshBasicMaterial( { map: videotexture } )
+            // var materialVideo = new THREE.MeshBasicMaterial( { map: videotexture } )
 
 
             new RGBELoader()
@@ -294,7 +292,7 @@
                         // called when the resource is loaded
                         function ( gltf ) {
 
-                            gltf.scene.children[0].material = materialVideo;
+                            // gltf.scene.children[0].material = materialVideo;
                             scene.add( gltf.scene );
 
                             var mesh = gltf.scene;
@@ -388,7 +386,7 @@
         }
     
 
-    var video = document.getElementById( 'chaiten-multiamenaza' );
-    video.play();
+    // var video = document.getElementById( 'chaiten-multiamenaza' );
+    // video.play();
     </script>
 </body></html>
