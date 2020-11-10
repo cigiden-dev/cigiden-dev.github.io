@@ -67,8 +67,6 @@ function pauseVideosAudios(multimedia) {
     video.play();
 }
 
-
-
 $(document).ready(function(){
     document.addEventListener('play', function(e){      
         var audios = document.getElementsByTagName('audio');
