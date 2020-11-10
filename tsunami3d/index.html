@@ -168,7 +168,16 @@
                 <div class="col-sm-8 my-1 text-left p-descripcion">
                     <h1 class="mb-3">Cartagena</h1>
                     <p>Esta simulación de tsunami proyectada sobre un relieve 3D a escala de Cartagena, muestra lo que ocurriría si un terremoto y posterior tsunami –tan grande como el que ocurrió en la zona en 1730 que tuvo una magnitud de 9.3– afectase hoy a la ciudad de Cartagena.</p>
-                    <!-- <img class="img-fluid" src="../img/tsunami.jpg" alt=""> -->
+                    <div id="canvas-cartagena" class="" style="">
+                        <div class="container-icono-3d">
+                            <div class="interact-icon-360-container" style="visibility: visible;">
+                                <div class="animation-wrapper">
+                                  <img class="icon-360" src="flecha.png">
+                                  <img class="hand-360 wobble-hor-bottom" src="mano.png">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-sm-12 my-5">
                     <h1 class="my-5">Preguntas</h1>
@@ -223,7 +232,16 @@
                 <div class="col-sm-8 my-1 text-left p-descripcion">
                     <h1 class="mb-3">Talcahuano</h1>
                     <p>Esta simulación de tsunami proyectada sobre un relieve 3D a escala Iquique, muestra lo que ocurriría si un terremoto y posterior tsunami –tan grande como el que ocurrió en la zona 2010 que tuvo una magnitud de 8.8– afectase hoy a la ciudad de Talcahuano.</p>
-                    <!-- <img class="img-fluid" src="../img/tsunami.jpg" alt=""> -->
+                    <div id="canvas-talcahuano" class="" style="">
+                        <div class="container-icono-3d">
+                            <div class="interact-icon-360-container" style="visibility: visible;">
+                                <div class="animation-wrapper">
+                                  <img class="icon-360" src="flecha.png">
+                                  <img class="hand-360 wobble-hor-bottom" src="mano.png">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-sm-12 my-5">
                     <h1 class="my-5">Preguntas</h1>
@@ -279,7 +297,16 @@
                 <div class="col-sm-8 my-1 text-left p-descripcion">
                     <h1 class="mb-3">Iquique</h1>
                     <p>Esta simulación de tsunami proyectada sobre un relieve 3D a escala Iquique, muestra lo que ocurriría si un terremoto y posterior tsunami –tan grande como el que ocurrió en la zona en 2014 que tuvo una magnitud de 8.1– afectase hoy a la ciudad de Iquique.</p>
-                    <!-- <img class="img-fluid" src="../img/tsunami.jpg" alt=""> -->
+                    <div id="canvas-iquique" class="" style="">
+                        <div class="container-icono-3d">
+                            <div class="interact-icon-360-container" style="visibility: visible;">
+                                <div class="animation-wrapper">
+                                  <img class="icon-360" src="flecha.png">
+                                  <img class="hand-360 wobble-hor-bottom" src="mano.png">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-sm-12 my-5">
                     <h1 class="my-5">Preguntas</h1>
@@ -381,6 +408,18 @@
         <source src="textures/valparaiso-v2.mp4" type="video/mp4">
     </video>
 
+    <video id="cartagena-tsunami" loop autoplay muted crossOrigin="anonymous" playsinline style="display: none;">
+        <source src="cartagena-s.mp4" type="video/mp4">
+    </video>
+
+    <video id="talcahuano-tsunami" loop autoplay muted crossOrigin="anonymous" playsinline style="display: none;">
+        <source src="talcahuano-s.mp4" type="video/mp4">
+    </video>
+
+    <video id="iquique-tsunami" loop autoplay muted crossOrigin="anonymous" playsinline style="display: none;">
+        <source src="antofagasta-s.mp4" type="video/mp4">
+    </video>
+
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
@@ -402,18 +441,21 @@
         import { RGBELoader } from './jsm/loaders/RGBELoader.js';
         import { RoughnessMipmapper } from './jsm/utils/RoughnessMipmapper.js';
 
-        var canvas, stats, controls;
-        var video, audio, videotexture, material;
-        var camera, scene, renderer;
-
-        window.onload = function() {
-
-            init();
-            animate();
-        };
 
 
-        function init() {
+        
+
+            var canvas, stats, controls;
+            var video, audio, videotexture, material;
+            var camera, scene, renderer;
+
+            window.onload = function() {
+
+                init();
+                animate();
+            };
+
+            function init() {
 
             canvas = document.createElement( 'div' );
             var elem = document.getElementById('canvas');
@@ -535,30 +577,507 @@
             myFunction(x) // Call listener function at run time
             x.addListener(myFunction) // Attach listener function on state changes
 
-            
+
 
             window.addEventListener( 'resize', onWindowResize, false );
-            
 
 
-        }
 
-        function onWindowResize() {
+            }
+
+            function onWindowResize() {
             camera.aspect = window.innerWidth / window.innerHeight;
             camera.updateProjectionMatrix();
             renderer.setSize( window.innerWidth, window.innerHeight );
-        }
+            }
 
-        //
+            //
 
-        function animate() {
-            
+            function animate() {
+
             requestAnimationFrame( animate );
 
             renderer.render( scene, camera );
 
 
-        }
+            }
+
+        
+
+        $( ".click-cartagena" ).click(function() {    
+
+            var canvas, stats, controls;
+            var video, audio, videotexture, material;
+            var camera, scene, renderer;
+
+            init();
+            animate();
+
+            function init() {
+
+            canvas = document.createElement( 'div' );
+            var elem = document.getElementById('canvas-cartagena');
+            elem.appendChild( canvas );
+
+            camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 0.25, 20 );
+            camera.position.set( 7, 4, 7 );
+
+            scene = new THREE.Scene();
+
+            video = document.getElementById( 'cartagena-tsunami' );
+
+
+            videotexture = new THREE.VideoTexture( video );
+
+            videotexture.format = THREE.RGBFormat;
+            videotexture.encoding = THREE.sRGBEncoding;
+            videotexture.wrapS = videotexture.wrapT = THREE.ClampToEdgeWrapping;
+            videotexture.magFilter = THREE.LinearFilter;
+            videotexture.mapping = THREE.EquirectangularReflectionMapping;
+
+            var materialVideo = new THREE.MeshBasicMaterial( { map: videotexture } )
+
+
+            new RGBELoader()
+                .setDataType( THREE.UnsignedByteType )
+                .setPath( 'textures/equirectangular/' )
+                .load( 'spot1Lux.hdr', function ( texture ) {
+
+                    var envMap = pmremGenerator.fromEquirectangular( texture ).texture;
+                    pmremGenerator.dispose();
+                    
+                    scene.environment = envMap;
+
+                    // model
+
+                    var roughnessMipmapper = new RoughnessMipmapper( renderer );
+
+                    // Instantiate a loader
+                    var loader = new GLTFLoader();
+
+                    // Optional: Provide a DRACOLoader instance to decode compressed mesh data
+                    var dracoLoader = new DRACOLoader();
+                    dracoLoader.setDecoderPath( './js/libs/draco/' );
+                    loader.setDRACOLoader( dracoLoader );
+
+                    // Load a glTF resource
+                    loader.load(
+                        // resource URL
+                        'models/gltf/Tsunami/valparaiso.gltf',
+                        // called when the resource is loaded
+                        function ( gltf ) {
+
+                            gltf.scene.children[0].material = materialVideo;
+                            scene.add( gltf.scene );
+
+                            var mesh = gltf.scene;
+
+                            gltf.animations; // Array<THREE.AnimationClip>
+                            gltf.scene; // THREE.Group
+                            gltf.scenes; // Array<THREE.Group>
+                            gltf.cameras; // Array<THREE.Camera>
+                            gltf.asset; // Object
+
+                        },
+                        // called while loading is progressing
+                        function ( xhr ) {
+
+                            console.log( ( xhr.loaded / xhr.total * 100 ) + '% loaded' );
+
+                        },
+                        // called when loading has errors
+                        function ( error ) {
+
+                            console.log( 'An error happened' );
+
+                        }
+                    );
+
+
+                } );
+
+            renderer = new THREE.WebGLRenderer( { antialias: true , alpha: true} );
+            renderer.setPixelRatio( window.devicePixelRatio );
+            renderer.setSize( window.innerWidth, window.innerHeight );
+            renderer.toneMapping = THREE.ACESFilmicToneMapping;
+            renderer.outputEncoding = THREE.sRGBEncoding;
+            canvas.appendChild( renderer.domElement );
+
+            var pmremGenerator = new THREE.PMREMGenerator( renderer );
+            pmremGenerator.compileEquirectangularShader();
+
+            controls = new OrbitControls( camera, renderer.domElement );
+            controls.target.set( -0.5, -0.5, - 0.2 );
+            controls.enableDamping = false;
+            controls.dampingFactor = 0.1;
+            controls.rotateSpeed = 0.2;
+            controls.zoomSpeed = 0.5;
+            controls.panSpeed = 0.3;
+            controls.maxDistance = 5; 
+            controls.minDistance = 2; 
+            controls.maxPolarAngle = 1.1; 
+            controls.minPolarAngle  = -1.1; 
+            camera.position.set( 100, 35, 145 );
+
+            function myFunction(x) {
+            if (x.matches) { // If media query matches
+
+                controls.maxDistance = 15; 
+                controls.minDistance = 9; 
+                controls.update();
+                camera.position.set( 8, 8, 8 );
+            } else {
+                controls.update();
+            }
+            }
+
+            var x = window.matchMedia("(max-width: 700px)")
+            myFunction(x) // Call listener function at run time
+            x.addListener(myFunction) // Attach listener function on state changes
+
+
+
+            window.addEventListener( 'resize', onWindowResize, false );
+
+
+
+            }
+
+            function onWindowResize() {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize( window.innerWidth, window.innerHeight );
+            }
+
+            //
+
+            function animate() {
+
+            requestAnimationFrame( animate );
+
+            renderer.render( scene, camera );
+
+
+            }
+
+            });
+
+            $( ".click-talcahuano" ).click(function() {    
+
+            var canvas, stats, controls;
+            var video, audio, videotexture, material;
+            var camera, scene, renderer;
+
+            init();
+            animate();
+
+            function init() {
+
+            canvas = document.createElement( 'div' );
+            var elem = document.getElementById('canvas-talcahuano');
+            elem.appendChild( canvas );
+
+            camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 0.25, 20 );
+            camera.position.set( 7, 4, 7 );
+
+            scene = new THREE.Scene();
+
+            video = document.getElementById( 'talcahuano-tsunami' );
+
+
+            videotexture = new THREE.VideoTexture( video );
+
+            videotexture.format = THREE.RGBFormat;
+            videotexture.encoding = THREE.sRGBEncoding;
+            videotexture.wrapS = videotexture.wrapT = THREE.ClampToEdgeWrapping;
+            videotexture.magFilter = THREE.LinearFilter;
+            videotexture.mapping = THREE.EquirectangularReflectionMapping;
+
+            var materialVideo = new THREE.MeshBasicMaterial( { map: videotexture } )
+
+
+            new RGBELoader()
+                .setDataType( THREE.UnsignedByteType )
+                .setPath( 'textures/equirectangular/' )
+                .load( 'spot1Lux.hdr', function ( texture ) {
+
+                    var envMap = pmremGenerator.fromEquirectangular( texture ).texture;
+                    pmremGenerator.dispose();
+                    
+                    scene.environment = envMap;
+
+                    // model
+
+                    var roughnessMipmapper = new RoughnessMipmapper( renderer );
+
+                    // Instantiate a loader
+                    var loader = new GLTFLoader();
+
+                    // Optional: Provide a DRACOLoader instance to decode compressed mesh data
+                    var dracoLoader = new DRACOLoader();
+                    dracoLoader.setDecoderPath( './js/libs/draco/' );
+                    loader.setDRACOLoader( dracoLoader );
+
+                    // Load a glTF resource
+                    loader.load(
+                        // resource URL
+                        'models/gltf/Tsunami/valparaiso.gltf',
+                        // called when the resource is loaded
+                        function ( gltf ) {
+
+                            gltf.scene.children[0].material = materialVideo;
+                            scene.add( gltf.scene );
+
+                            var mesh = gltf.scene;
+
+                            gltf.animations; // Array<THREE.AnimationClip>
+                            gltf.scene; // THREE.Group
+                            gltf.scenes; // Array<THREE.Group>
+                            gltf.cameras; // Array<THREE.Camera>
+                            gltf.asset; // Object
+
+                        },
+                        // called while loading is progressing
+                        function ( xhr ) {
+
+                            console.log( ( xhr.loaded / xhr.total * 100 ) + '% loaded' );
+
+                        },
+                        // called when loading has errors
+                        function ( error ) {
+
+                            console.log( 'An error happened' );
+
+                        }
+                    );
+
+
+                } );
+
+            renderer = new THREE.WebGLRenderer( { antialias: true , alpha: true} );
+            renderer.setPixelRatio( window.devicePixelRatio );
+            renderer.setSize( window.innerWidth, window.innerHeight );
+            renderer.toneMapping = THREE.ACESFilmicToneMapping;
+            renderer.outputEncoding = THREE.sRGBEncoding;
+            canvas.appendChild( renderer.domElement );
+
+            var pmremGenerator = new THREE.PMREMGenerator( renderer );
+            pmremGenerator.compileEquirectangularShader();
+
+            controls = new OrbitControls( camera, renderer.domElement );
+            controls.target.set( -0.5, -0.5, - 0.2 );
+            controls.enableDamping = false;
+            controls.dampingFactor = 0.1;
+            controls.rotateSpeed = 0.2;
+            controls.zoomSpeed = 0.5;
+            controls.panSpeed = 0.3;
+            controls.maxDistance = 5; 
+            controls.minDistance = 2; 
+            controls.maxPolarAngle = 1.1; 
+            controls.minPolarAngle  = -1.1; 
+            camera.position.set( 100, 35, 145 );
+
+            function myFunction(x) {
+            if (x.matches) { // If media query matches
+
+                controls.maxDistance = 15; 
+                controls.minDistance = 9; 
+                controls.update();
+                camera.position.set( 8, 8, 8 );
+            } else {
+                controls.update();
+            }
+            }
+
+            var x = window.matchMedia("(max-width: 700px)")
+            myFunction(x) // Call listener function at run time
+            x.addListener(myFunction) // Attach listener function on state changes
+
+
+
+            window.addEventListener( 'resize', onWindowResize, false );
+
+
+
+            }
+
+            function onWindowResize() {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize( window.innerWidth, window.innerHeight );
+            }
+
+            //
+
+            function animate() {
+
+            requestAnimationFrame( animate );
+
+            renderer.render( scene, camera );
+
+
+            }
+
+            });
+
+            $( ".click-iquique" ).click(function() {    
+
+            var canvas, stats, controls;
+            var video, audio, videotexture, material;
+            var camera, scene, renderer;
+
+            init();
+            animate();
+
+            function init() {
+
+            canvas = document.createElement( 'div' );
+            var elem = document.getElementById('canvas-iquique');
+            elem.appendChild( canvas );
+
+            camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 0.25, 20 );
+            camera.position.set( 7, 4, 7 );
+
+            scene = new THREE.Scene();
+
+            video = document.getElementById( 'iquique-tsunami' );
+
+
+            videotexture = new THREE.VideoTexture( video );
+
+            videotexture.format = THREE.RGBFormat;
+            videotexture.encoding = THREE.sRGBEncoding;
+            videotexture.wrapS = videotexture.wrapT = THREE.ClampToEdgeWrapping;
+            videotexture.magFilter = THREE.LinearFilter;
+            videotexture.mapping = THREE.EquirectangularReflectionMapping;
+
+            var materialVideo = new THREE.MeshBasicMaterial( { map: videotexture } )
+
+
+            new RGBELoader()
+                .setDataType( THREE.UnsignedByteType )
+                .setPath( 'textures/equirectangular/' )
+                .load( 'spot1Lux.hdr', function ( texture ) {
+
+                    var envMap = pmremGenerator.fromEquirectangular( texture ).texture;
+                    pmremGenerator.dispose();
+                    
+                    scene.environment = envMap;
+
+                    // model
+
+                    var roughnessMipmapper = new RoughnessMipmapper( renderer );
+
+                    // Instantiate a loader
+                    var loader = new GLTFLoader();
+
+                    // Optional: Provide a DRACOLoader instance to decode compressed mesh data
+                    var dracoLoader = new DRACOLoader();
+                    dracoLoader.setDecoderPath( './js/libs/draco/' );
+                    loader.setDRACOLoader( dracoLoader );
+
+                    // Load a glTF resource
+                    loader.load(
+                        // resource URL
+                        'models/gltf/Tsunami/valparaiso.gltf',
+                        // called when the resource is loaded
+                        function ( gltf ) {
+
+                            gltf.scene.children[0].material = materialVideo;
+                            scene.add( gltf.scene );
+
+                            var mesh = gltf.scene;
+
+                            gltf.animations; // Array<THREE.AnimationClip>
+                            gltf.scene; // THREE.Group
+                            gltf.scenes; // Array<THREE.Group>
+                            gltf.cameras; // Array<THREE.Camera>
+                            gltf.asset; // Object
+
+                        },
+                        // called while loading is progressing
+                        function ( xhr ) {
+
+                            console.log( ( xhr.loaded / xhr.total * 100 ) + '% loaded' );
+
+                        },
+                        // called when loading has errors
+                        function ( error ) {
+
+                            console.log( 'An error happened' );
+
+                        }
+                    );
+
+
+                } );
+
+            renderer = new THREE.WebGLRenderer( { antialias: true , alpha: true} );
+            renderer.setPixelRatio( window.devicePixelRatio );
+            renderer.setSize( window.innerWidth, window.innerHeight );
+            renderer.toneMapping = THREE.ACESFilmicToneMapping;
+            renderer.outputEncoding = THREE.sRGBEncoding;
+            canvas.appendChild( renderer.domElement );
+
+            var pmremGenerator = new THREE.PMREMGenerator( renderer );
+            pmremGenerator.compileEquirectangularShader();
+
+            controls = new OrbitControls( camera, renderer.domElement );
+            controls.target.set( -0.5, -0.5, - 0.2 );
+            controls.enableDamping = false;
+            controls.dampingFactor = 0.1;
+            controls.rotateSpeed = 0.2;
+            controls.zoomSpeed = 0.5;
+            controls.panSpeed = 0.3;
+            controls.maxDistance = 5; 
+            controls.minDistance = 2; 
+            controls.maxPolarAngle = 1.1; 
+            controls.minPolarAngle  = -1.1; 
+            camera.position.set( 100, 35, 145 );
+
+            function myFunction(x) {
+            if (x.matches) { // If media query matches
+
+                controls.maxDistance = 15; 
+                controls.minDistance = 9; 
+                controls.update();
+                camera.position.set( 8, 8, 8 );
+            } else {
+                controls.update();
+            }
+            }
+
+            var x = window.matchMedia("(max-width: 700px)")
+            myFunction(x) // Call listener function at run time
+            x.addListener(myFunction) // Attach listener function on state changes
+
+
+
+            window.addEventListener( 'resize', onWindowResize, false );
+
+
+
+            }
+
+            function onWindowResize() {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize( window.innerWidth, window.innerHeight );
+            }
+
+            //
+
+            function animate() {
+
+            requestAnimationFrame( animate );
+
+            renderer.render( scene, camera );
+
+
+            }
+
+            });
+
     
 
     var video = document.getElementById( 'valparaiso-tsunami' );

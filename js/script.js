@@ -54,12 +54,12 @@ $( ".click-iquique" ).click(function() {
     pauseVideosAudios("video-iquique");   
 });
 
-$( "#canvas" ).click(function() {
-    $(".container-icono-3d").hide(1500);
+$( "#canvas, #canvas-cartagena, #canvas-talcahuano, #canvas-iquique" ).click(function() {
+    $(this).find("div:first").hide(1500);
 });
 
-$("#canvas").on("tap",function(){
-    $(".container-icono-3d").hide(1500);
+$("#canvas, #canvas-cartagena, #canvas-talcahuano, #canvas-iquique").on("tap",function(){
+    $(this).find("div:first").hide(1500);
 });
 
 function pauseVideosAudios(multimedia) {
