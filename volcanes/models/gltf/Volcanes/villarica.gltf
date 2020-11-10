@@ -23,16 +23,16 @@
                 0.7071067094802856
             ],
             "scale" : [
-                0.0004166488070040941,
-                0.00041664886521175504,
-                0.00041664886521175504
+                0.0003759745159186423,
+                0.00037597454502247274,
+                0.00037597454502247274
             ]
         }
     ],
     "materials" : [
         {
             "doubleSided" : true,
-            "name" : "TerrainNodeMaterial.019",
+            "name" : "TerrainNodeMaterial.021",
             "pbrMetallicRoughness" : {
                 "baseColorFactor" : [
                     1,
@@ -51,7 +51,7 @@
     ],
     "meshes" : [
         {
-            "name" : "TerrainNodeMesh.019",
+            "name" : "TerrainNodeMesh.021",
             "primitives" : [
                 {
                     "attributes" : {
@@ -81,29 +81,29 @@
         {
             "bufferView" : 0,
             "componentType" : 5126,
-            "count" : 38652,
+            "count" : 38635,
             "max" : [
                 11039.1826171875,
-                9547.416015625,
+                9546.388671875,
                 0
             ],
             "min" : [
                 -11039.1826171875,
-                -9547.416015625,
-                -2194
+                -9546.388671875,
+                -2266
             ],
             "type" : "VEC3"
         },
         {
             "bufferView" : 1,
             "componentType" : 5126,
-            "count" : 38652,
+            "count" : 38635,
             "type" : "VEC3"
         },
         {
             "bufferView" : 2,
             "componentType" : 5126,
-            "count" : 38652,
+            "count" : 38635,
             "type" : "VEC2"
         },
         {
@@ -116,28 +116,28 @@
     "bufferViews" : [
         {
             "buffer" : 0,
-            "byteLength" : 463824,
+            "byteLength" : 463620,
             "byteOffset" : 0
         },
         {
             "buffer" : 0,
-            "byteLength" : 463824,
-            "byteOffset" : 463824
+            "byteLength" : 463620,
+            "byteOffset" : 463620
         },
         {
             "buffer" : 0,
-            "byteLength" : 309216,
-            "byteOffset" : 927648
+            "byteLength" : 309080,
+            "byteOffset" : 927240
         },
         {
             "buffer" : 0,
             "byteLength" : 454104,
-            "byteOffset" : 1236864
+            "byteOffset" : 1236320
         }
     ],
     "buffers" : [
         {
-            "byteLength" : 1690968,
+            "byteLength" : 1690424,
             "uri" : "villarica.bin"
         }
     ]
