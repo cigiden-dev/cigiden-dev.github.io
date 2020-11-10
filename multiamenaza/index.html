@@ -69,16 +69,81 @@
         </div>
     </div>
 
-
-
-    <div class="container position-relative overflow-hidden">
+     <div class="container position-relative overflow-hidden">
         <div class="row my-3"> 
-            <div class="col-sm-12 my-5 titulo">
-                    <h1>Multiamenaza</h1>
+            <div class="col-sm-12 my-5 titulo p-descripcion">
+                    <h1>Módulo 1: Multiamenaza</h1>
+                    <p class="my-3">Esta simulación de amenazas naturales –como tsunamis, erupciones volcánicas y aluviones– proyectada sobre una maqueta 3D a escala, en un territorio “posible” que puede representar un territorio característico de Chile. Sobre esta maqueta se proyectan capas de información que permiten entender cómo se “construye” el riesgo. Se ilustran aquí las dimensiones que controlan el riesgo: amenazas naturales, exposición y vulnerabilidad.</p>
+                    </p>
+                    <div class="dropdown show text-left mt-4 ">
+                        <a class="btn btn-secondary dropdown-toggle naranjo px-5 py-3" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Selecciona Multiamenaza
+                        </a>
+                      
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                          <div class="dropdown-item click-multiamenaza">Territorio Vulnerable</div>
+                        </div>
+                      </div>   
+
             </div>
-            <div class="col-sm-12 my-1 text-left p-descripcion">
-                    <p>Esta simulación de amenazas naturales –como tsunamis, erupciones volcánicas y aluviones– proyectada sobre una maqueta 3D a escala, en un territorio “posible” que puede representar un territorio característico de Chile. Sobre esta maqueta se proyectan capas de información que permiten entender cómo se “construye” el riesgo. Se ilustran aquí las dimensiones que controlan el riesgo: amenazas naturales, exposición y vulnerabilidad.</p>
+            <div id="multiamenaza" class="row">
+                <div class="col-sm-4 my-1 text-center p-descripcion">
+                    <video class="video-hablando" width="100%" height="auto" controls style="outline: none;" controlsList="nofullscreen nodownload noremoteplayback">
+                    <source src="multiamenaza.mp4" type="video/mp4">                    
+                    </video>
+                    <p class="nombre-investigador font-weight-bold">Rodrigo Cienfuegos</p>
+                    <p class="nombre-investigador">Ingeniero y académico UC</p>
+                </div>
+                <div class="col-sm-8 my-1 text-left p-descripcion">
+                    <h1 class="mb-3">Chile territorio vulnerable</h1>
+                    <p>Para mostrar estos conceptos básicos del riesgo de desastres, este módulo virtual muestra en un mapa 3D un territorio de Chile simulado, donde se representan capas de datos proyectados junto a cuatro amenazas naturales más frecuentes del país, y que se caracterizan de acuerdo a la vulnerabilidad por medio de un video que superpone las distintas capas del riesgo de desastre.</p>
+                    
+                    <video width="100%" height="auto" autoplay loop style="outline: none;" >
+                        <source src="multiamenaza-simulacion.mp4" type="video/mp4">                    
+                    </video>
+                </div>
+                <div class="col-sm-12 my-5">
+                    <h1 class="my-5">Preguntas</h1>
+                    <div class="row">
+                        <div class="col-4 preguntas-tsunami">
+                          <div class="list-group" id="list-tab" role="tablist">
+                            <a class="list-group-item list-group-item-action active" id="multiamenaza-p-1-list" data-toggle="list" href="#multiamenaza-p-1" role="tab" aria-controls="multiamenaza-p1">Pregunta 1</a>
+                            <a class="list-group-item list-group-item-action" id="multiamenaza-p-3-list" data-toggle="list" href="#multiamenaza-p-2" role="tab" aria-controls="multiamenaza-p2">Pregunta 2</a>
+                            <a class="list-group-item list-group-item-action" id="multiamenaza-p-3-list" data-toggle="list" href="#multiamenaza-p-3" role="tab" aria-controls="multiamenaza-p3">Pregunta 3</a>
+                          </div>
+                        </div>
+                        <div class="col-8">
+                            
+
+                          <div class="tab-content" id="nav-tabContent">
+                            <div class="tab-pane fade show active" id="multiamenaza-p-1" role="tabpanel" aria-labelledby="multiamenaza-p-1-list">
+                                <h4>1. ¿Por qué los desastres no son naturales?</h4>
+                                <audio controls controlsList="nodownload">
+                                    <source src="multiamenaza-audio-1.ogg" type="audio/ogg">>
+                                </audio>
+                                <p>Los desastres no son naturales, ya que ocurren cuando se conjugan factores como la amenaza natural, la exposición y la vulnerabilidad. Es decir, son una consecuencia de estar viviendo con una mala relación con el entorno, y una mala relación con las amenazas naturales.</p>
+                            </div>
+                            <div class="tab-pane fade" id="multiamenaza-p-2" role="tabpanel" aria-labelledby="multiamenaza-p-2-list">
+                                <h4>2. ¿Por qué estudiar los fenómenos naturales como terremotos, tsunamis, aluviones y erupciones volcánicas?</h4>
+                                <audio controls controlsList="nodownload">
+                                    <source src="multiamenaza-audio-2.ogg" type="audio/ogg">>
+                                </audio>
+                                <p>Lo que hace la ciencia y, CIGIDEN, es tratar de develar cuáles son las características más fundamentales de estos fenómenos naturales, de manera de que nuestra sociedad y la infraestructura que la compone, esté mejor preparada no solo para responder mejor, sino también para recuperarse en el tiempo, y así minimizar sus impactos. De alguna manera, estudiamos e investigamos para evitar que estos eventos extremos, muy propios de nuestro territorio en movimiento, se transformen en desastres. Al mismo tiempo, queremos que las comunidades conozcan los riesgos asociados a nuestras amenazas, no olviden la memoria de desastres en Chile y, en conjunto, logremos ser más resilientes como sociedad.</p>
+                            </div>
+                            <div class="tab-pane fade" id="multiamenaza-p-3" role="tabpanel" aria-labelledby="multiamenaza-p-3-list">
+                                <h4>3. ¿Por qué estudié esta área de la ciencia?</h4>
+                                <audio controls controlsList="nodownload">
+                                    <source src="multiamenaza-audio-3.ogg" type="audio/ogg">>
+                                </audio>
+                                <p>Cuando era niño me gustaba pescar recorriendo a pie el río Trancura con mi papá. Siempre me fascinó ese recorrido y ver el agua pasar. Años después supe que existía una carrera que me permitiría estudiar para entender cómo se comportan los ríos y el oleaje. Así fue como llegué a la ingeniería hidráulica, y de ahí a pensar en soluciones para mejorar nuestra interacción con los sistemas naturales con los que convivimos. La especialidad permite, por ejemplo, el diseño de estrategias y tecnologías que reduzcan los impactos de inundaciones. Para ello se debe entender primero cómo funcionan las redes de drenaje naturales y los sistemas costeros.</p>
+                            </div>
+                          </div>
+                        </div>
+                    </div>  
+                </div>
+                
             </div>
+
         </div>
     </div>
 
@@ -136,6 +201,7 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="../js/jquery-3.5.1.slim.min.js"></script>
+    <script src="../js/script.js"></script>   
     <script>window.jQuery || document.write('<script src="../js/jquery-slim.min.js"><\/script>')</script>
     <script src="../js/popper.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
