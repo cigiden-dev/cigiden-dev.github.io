@@ -265,6 +265,18 @@ p{
   text-decoration: none;
 }
 
+.contacto a{
+  color: #fff;
+  opacity: 0.8;
+  font-size: 0.7rem;
+}
+
+.contacto a:hover{
+  color: #fff;
+  text-decoration: none;
+  opacity: 1;
+}
+
 /*
  * Dummy devices (replace them with your own or something else entirely!)
  */
@@ -408,10 +420,19 @@ p{
   margin-left: 20px;
 }
 
+.experimenta-conoce .dropdown-item{
+  font-size: 1rem !important;
+}
+
 .social-media{
-  height: 40px;
+  height: 42px;
   margin: 5px;
   padding-top: 5px;
+}
+
+.social-media-txt h2{
+  font-size: 0.8rem !important;
+  margin-bottom: 3px;
 }
 
 .escala > div > label{
@@ -423,7 +444,7 @@ p{
 }
 
 .social-media-txt h2{
-  text-align: center;
+  text-align: left;
   width: 100%;
 }
 

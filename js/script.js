@@ -1,5 +1,3 @@
-
-
 $( ".todas-amenazas" ).click(function() {
     $( ".bg-mapa" ).css('background-image', 'url("' + '../img/bg-mapa/mapa-1.jpg' + '")');
     $(".aluviones, .terremotos, .tsunamis, .volcanes ").css('opacity','1');
