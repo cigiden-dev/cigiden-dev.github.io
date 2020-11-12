@@ -606,6 +606,11 @@
 
         $( ".click-cartagena" ).click(function() {    
 
+            
+
+            if ($( "#canvas-cartagena" ).hasClass( "cargado" ) == false) {
+            
+
             var canvas, stats, controls;
             var video, audio, videotexture, material;
             var camera, scene, renderer;
@@ -617,6 +622,7 @@
 
             canvas = document.createElement( 'div' );
             var elem = document.getElementById('canvas-cartagena');
+            $( "#canvas-cartagena" ).addClass( "cargado" );
             elem.appendChild( canvas );
 
             camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 0.25, 20 );
@@ -759,10 +765,16 @@
 
 
             }
+            }
+            else{
+                return
+            }
 
             });
 
             $( ".click-talcahuano" ).click(function() {    
+
+            if ($( "#canvas-talcahuano" ).hasClass( "cargado" ) == false) {
 
             var canvas, stats, controls;
             var video, audio, videotexture, material;
@@ -775,6 +787,7 @@
 
             canvas = document.createElement( 'div' );
             var elem = document.getElementById('canvas-talcahuano');
+            $( "#canvas-talcahuano" ).addClass( "cargado" );
             elem.appendChild( canvas );
 
             camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 0.25, 20 );
@@ -917,10 +930,15 @@
 
 
             }
-
+            }
+            else{
+                return
+            }
             });
 
             $( ".click-iquique" ).click(function() {    
+
+            if ($( "#canvas-iquique" ).hasClass( "cargado" ) == false) {
 
             var canvas, stats, controls;
             var video, audio, videotexture, material;
@@ -933,6 +951,7 @@
 
             canvas = document.createElement( 'div' );
             var elem = document.getElementById('canvas-iquique');
+            $( "#canvas-iquique" ).addClass( "cargado" );
             elem.appendChild( canvas );
 
             camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 0.25, 20 );
@@ -1075,7 +1094,10 @@
 
 
             }
-
+            }
+            else{
+                return
+            }
             });
 
     
