@@ -214,11 +214,11 @@ p{
   color: #38415A;
 }
 
-#colaboradores > div {
+.colaboradores > div {
   margin-top: 25px;
 }
 
-#colaboradores > div > p {
+.colaboradores > div > p {
   margin-bottom: 25px;
 }
 
