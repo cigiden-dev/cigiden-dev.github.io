@@ -663,7 +663,7 @@
                     // Load a glTF resource
                     loader.load(
                         // resource URL
-                        'models/gltf/Tsunami/valparaiso.gltf',
+                        'models/gltf/Tsunami/cartagena.gltf',
                         // called when the resource is loaded
                         function ( gltf ) {
 
@@ -707,17 +707,17 @@
             pmremGenerator.compileEquirectangularShader();
 
             controls = new OrbitControls( camera, renderer.domElement );
-            controls.target.set( -0.5, -0.5, - 0.2 );
+            controls.target.set( 0, 1, 3 );
             controls.enableDamping = false;
             controls.dampingFactor = 0.1;
             controls.rotateSpeed = 0.2;
             controls.zoomSpeed = 0.5;
             controls.panSpeed = 0.3;
-            controls.maxDistance = 5; 
-            controls.minDistance = 2; 
+            controls.maxDistance = 4; 
+            controls.minDistance = 1; 
             controls.maxPolarAngle = 1.1; 
             controls.minPolarAngle  = -1.1; 
-            camera.position.set( 100, 35, 145 );
+            camera.position.set( -200, 35, 145 );
 
             function myFunction(x) {
             if (x.matches) { // If media query matches
@@ -1081,6 +1081,12 @@
     
 
     var video = document.getElementById( 'valparaiso-tsunami' );
+    video.play();
+    var video = document.getElementById( 'cartagena-tsunami' );
+    video.play();
+    var video = document.getElementById( 'talcahuano-tsunami' );
+    video.play();
+    var video = document.getElementById( 'iquique-tsunami' );
     video.play();
     </script>
 

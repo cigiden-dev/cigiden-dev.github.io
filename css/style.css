@@ -430,6 +430,11 @@ p{
   padding-top: 5px;
 }
 
+.img-logo-fluid{
+  height: 65px;
+  width: auto;
+}
+
 .social-media-txt h2{
   font-size: 0.8rem !important;
   margin-bottom: 3px;
