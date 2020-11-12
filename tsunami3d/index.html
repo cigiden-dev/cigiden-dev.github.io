@@ -417,7 +417,7 @@
     </video>
 
     <video id="iquique-tsunami" loop autoplay muted crossOrigin="anonymous" playsinline style="display: none;">
-        <source src="antofagasta-s.mp4" type="video/mp4">
+        <source src="iquique-s.mp4" type="video/mp4">
     </video>
 
 
@@ -834,7 +834,7 @@
                     // Load a glTF resource
                     loader.load(
                         // resource URL
-                        'models/gltf/Tsunami/valparaiso.gltf',
+                        'models/gltf/Tsunami/talcahuano.gltf',
                         // called when the resource is loaded
                         function ( gltf ) {
 
@@ -878,17 +878,17 @@
             pmremGenerator.compileEquirectangularShader();
 
             controls = new OrbitControls( camera, renderer.domElement );
-            controls.target.set( -0.5, -0.5, - 0.2 );
+            controls.target.set( -0.5, -2, - 0.2 );
             controls.enableDamping = false;
             controls.dampingFactor = 0.1;
             controls.rotateSpeed = 0.2;
             controls.zoomSpeed = 0.5;
             controls.panSpeed = 0.3;
-            controls.maxDistance = 5; 
-            controls.minDistance = 2; 
+            controls.maxDistance = 10; 
+            controls.minDistance = 5; 
             controls.maxPolarAngle = 1.1; 
             controls.minPolarAngle  = -1.1; 
-            camera.position.set( 100, 35, 145 );
+            camera.position.set( -100, 35, 145 );
 
             function myFunction(x) {
             if (x.matches) { // If media query matches
@@ -998,7 +998,7 @@
                     // Load a glTF resource
                     loader.load(
                         // resource URL
-                        'models/gltf/Tsunami/valparaiso.gltf',
+                        'models/gltf/Tsunami/iquique.gltf',
                         // called when the resource is loaded
                         function ( gltf ) {
 
@@ -1042,17 +1042,17 @@
             pmremGenerator.compileEquirectangularShader();
 
             controls = new OrbitControls( camera, renderer.domElement );
-            controls.target.set( -0.5, -0.5, - 0.2 );
+            controls.target.set( -0.5, -0.5, 2 );
             controls.enableDamping = false;
             controls.dampingFactor = 0.1;
             controls.rotateSpeed = 0.2;
             controls.zoomSpeed = 0.5;
             controls.panSpeed = 0.3;
-            controls.maxDistance = 5; 
-            controls.minDistance = 2; 
+            controls.maxDistance = 6; 
+            controls.minDistance = 3; 
             controls.maxPolarAngle = 1.1; 
             controls.minPolarAngle  = -1.1; 
-            camera.position.set( 100, 35, 145 );
+            camera.position.set( -100, 35, 145 );
 
             function myFunction(x) {
             if (x.matches) { // If media query matches
