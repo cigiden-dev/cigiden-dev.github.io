@@ -15,7 +15,7 @@
  
 .bg-azul{
   background-color: #005F80;
-  height: 120vh;
+  height: 42rem;
 }
 
 .bg-azul-2{
@@ -29,7 +29,7 @@
 
 .bg-cordillera{
   background-image: url(../img/bg-cordillera.jpg);
-  height: 120vh;
+  height: 42rem;
   background-position: center;
   background-size: cover;
 }
@@ -108,22 +108,22 @@ h3{
 }
 
 .divisor{
-  margin-top: -45vh;
+  margin-top: -22rem;
   margin-bottom: ;
   z-index: 1;
 }
 
 .divisor-2{
-  margin-top: -25vh !important;
+  margin-top: -10rem !important;
 }
 
 .cuadricula-2{
-  height: 75vh;
+  height: 35rem;
 }
 
 .menu-cuadricula{
   padding: 0px 10vw 0px 10vw;
-  margin-top: -44vh;
+  margin-top: -10rem;
   z-index: 2;
 }
 
