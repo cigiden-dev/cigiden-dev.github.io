@@ -15,7 +15,7 @@
  
 .bg-azul{
   background-color: #005F80;
-  height: 42rem;
+  height: 50rem;
 }
 
 .bg-azul-2{
@@ -113,6 +113,10 @@ h3{
   z-index: 1;
 }
 
+.tsunami-lab-img:hover{
+  opacity: 0.8;
+}
+
 .divisor-2{
   margin-top: -10rem !important;
 }
@@ -123,7 +127,7 @@ h3{
 
 .menu-cuadricula{
   padding: 0px 10vw 0px 10vw;
-  margin-top: -10rem;
+  margin-top: -18rem;
   z-index: 2;
 }
 
@@ -192,6 +196,10 @@ form {
 
 .bg-plomo{
   background-color: #EBEBEB;
+}
+
+.bg-blanco{
+  background-color: #fff;
 }
 
 .footer-text > div > h2 {
