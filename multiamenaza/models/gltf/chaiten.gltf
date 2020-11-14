@@ -15,7 +15,7 @@
     "nodes" : [
         {
             "mesh" : 0,
-            "name" : "TerrainNode",
+            "name" : "TerrainNode.001",
             "rotation" : [
                 0.7071068286895752,
                 0,
@@ -23,16 +23,16 @@
                 0.7071067094802856
             ],
             "scale" : [
-                0.0002909136819653213,
-                0.00029091371106915176,
-                0.00029091371106915176
+                0.00023073852935340255,
+                0.00023073835473041981,
+                0.00023073835473041981
             ]
         }
     ],
     "materials" : [
         {
             "doubleSided" : true,
-            "name" : "TerrainNodeMaterial.003",
+            "name" : "TerrainNodeMaterial.008",
             "pbrMetallicRoughness" : {
                 "baseColorFactor" : [
                     1,
@@ -51,7 +51,7 @@
     ],
     "meshes" : [
         {
-            "name" : "TerrainNodeMesh.003",
+            "name" : "TerrainNodeMesh.008",
             "primitives" : [
                 {
                     "attributes" : {
@@ -81,63 +81,63 @@
         {
             "bufferView" : 0,
             "componentType" : 5126,
-            "count" : 59127,
+            "count" : 279,
             "max" : [
-                12523.4423828125,
-                12533.4111328125,
+                15770.2607421875,
+                17731.458984375,
                 0
             ],
             "min" : [
-                -12523.4423828125,
-                -12533.4111328125,
-                -1504
+                -15770.2607421875,
+                -17731.458984375,
+                -2127
             ],
             "type" : "VEC3"
         },
         {
             "bufferView" : 1,
             "componentType" : 5126,
-            "count" : 59127,
+            "count" : 279,
             "type" : "VEC3"
         },
         {
             "bufferView" : 2,
             "componentType" : 5126,
-            "count" : 59127,
+            "count" : 279,
             "type" : "VEC2"
         },
         {
             "bufferView" : 3,
             "componentType" : 5123,
-            "count" : 320760,
+            "count" : 1428,
             "type" : "SCALAR"
         }
     ],
     "bufferViews" : [
         {
             "buffer" : 0,
-            "byteLength" : 709524,
+            "byteLength" : 3348,
             "byteOffset" : 0
         },
         {
             "buffer" : 0,
-            "byteLength" : 709524,
-            "byteOffset" : 709524
+            "byteLength" : 3348,
+            "byteOffset" : 3348
         },
         {
             "buffer" : 0,
-            "byteLength" : 473016,
-            "byteOffset" : 1419048
+            "byteLength" : 2232,
+            "byteOffset" : 6696
         },
         {
             "buffer" : 0,
-            "byteLength" : 641520,
-            "byteOffset" : 1892064
+            "byteLength" : 2856,
+            "byteOffset" : 8928
         }
     ],
     "buffers" : [
         {
-            "byteLength" : 2533584,
+            "byteLength" : 11784,
             "uri" : "chaiten.bin"
         }
     ]
