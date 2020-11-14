@@ -618,3 +618,19 @@ position: absolute;
     position: absolute;
     z-index: 100;
   }
+
+  .container-icono-3d-volcan{
+    width: 100%;
+    height: 100%;
+    transform: translate(50%, 30%);
+    position: absolute;
+    z-index: 100;
+  }
+
+  .container-icono-3d-tsunami{
+    width: 100%;
+    height: 100%;
+    transform: translate(50%, 30%);
+    position: absolute;
+    z-index: 100;
+  }

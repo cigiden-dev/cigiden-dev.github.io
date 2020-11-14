@@ -52,11 +52,11 @@ $( ".click-iquique" ).click(function() {
     pauseVideosAudios("video-iquique");   
 });
 
-$( "#canvas, #canvas-cartagena, #canvas-talcahuano, #canvas-iquique" ).click(function() {
+$( "#canvas, #canvas-cartagena, #canvas-talcahuano, #canvas-iquique, #canvas-volcan, #canvas-tsunami" ).click(function() {
     $(this).find("div:first").hide(1500);
 });
 
-$("#canvas, #canvas-cartagena, #canvas-talcahuano, #canvas-iquique").on("tap",function(){
+$("#canvas, #canvas-cartagena, #canvas-talcahuano, #canvas-iquique, #canvas-volcan, #canvas-tsunami").on("tap",function(){
     $(this).find("div:first").hide(1500);
 });
 

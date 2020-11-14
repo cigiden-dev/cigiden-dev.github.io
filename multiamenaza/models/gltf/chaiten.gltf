@@ -23,16 +23,16 @@
                 0.7071067094802856
             ],
             "scale" : [
-                0.0003759745159186423,
-                0.00037597454502247274,
-                0.00037597454502247274
+                0.0002909136819653213,
+                0.00029091371106915176,
+                0.00029091371106915176
             ]
         }
     ],
     "materials" : [
         {
             "doubleSided" : true,
-            "name" : "TerrainNodeMaterial.021",
+            "name" : "TerrainNodeMaterial.003",
             "pbrMetallicRoughness" : {
                 "baseColorFactor" : [
                     1,
@@ -51,7 +51,7 @@
     ],
     "meshes" : [
         {
-            "name" : "TerrainNodeMesh.021",
+            "name" : "TerrainNodeMesh.003",
             "primitives" : [
                 {
                     "attributes" : {
@@ -81,64 +81,64 @@
         {
             "bufferView" : 0,
             "componentType" : 5126,
-            "count" : 38635,
+            "count" : 59127,
             "max" : [
-                11039.1826171875,
-                9546.388671875,
+                12523.4423828125,
+                12533.4111328125,
                 0
             ],
             "min" : [
-                -11039.1826171875,
-                -9546.388671875,
-                -2266
+                -12523.4423828125,
+                -12533.4111328125,
+                -1504
             ],
             "type" : "VEC3"
         },
         {
             "bufferView" : 1,
             "componentType" : 5126,
-            "count" : 38635,
+            "count" : 59127,
             "type" : "VEC3"
         },
         {
             "bufferView" : 2,
             "componentType" : 5126,
-            "count" : 38635,
+            "count" : 59127,
             "type" : "VEC2"
         },
         {
             "bufferView" : 3,
             "componentType" : 5123,
-            "count" : 227052,
+            "count" : 320760,
             "type" : "SCALAR"
         }
     ],
     "bufferViews" : [
         {
             "buffer" : 0,
-            "byteLength" : 463620,
+            "byteLength" : 709524,
             "byteOffset" : 0
         },
         {
             "buffer" : 0,
-            "byteLength" : 463620,
-            "byteOffset" : 463620
+            "byteLength" : 709524,
+            "byteOffset" : 709524
         },
         {
             "buffer" : 0,
-            "byteLength" : 309080,
-            "byteOffset" : 927240
+            "byteLength" : 473016,
+            "byteOffset" : 1419048
         },
         {
             "buffer" : 0,
-            "byteLength" : 454104,
-            "byteOffset" : 1236320
+            "byteLength" : 641520,
+            "byteOffset" : 1892064
         }
     ],
     "buffers" : [
         {
-            "byteLength" : 1690424,
-            "uri" : "villarica.bin"
+            "byteLength" : 2533584,
+            "uri" : "chaiten.bin"
         }
     ]
 }
