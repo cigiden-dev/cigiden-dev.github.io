@@ -23,16 +23,16 @@
                 0.7071067094802856
             ],
             "scale" : [
-                0.00023073852935340255,
-                0.00023073835473041981,
-                0.00023073835473041981
+                0.00027252716245129704,
+                0.0002725271915551275,
+                0.0002725271915551275
             ]
         }
     ],
     "materials" : [
         {
             "doubleSided" : true,
-            "name" : "TerrainNodeMaterial.008",
+            "name" : "TerrainNodeMaterial.014",
             "pbrMetallicRoughness" : {
                 "baseColorFactor" : [
                     1,
@@ -51,7 +51,7 @@
     ],
     "meshes" : [
         {
-            "name" : "TerrainNodeMesh.008",
+            "name" : "TerrainNodeMesh.014",
             "primitives" : [
                 {
                     "attributes" : {
@@ -81,63 +81,63 @@
         {
             "bufferView" : 0,
             "componentType" : 5126,
-            "count" : 279,
+            "count" : 245,
             "max" : [
-                15770.2607421875,
-                17731.458984375,
+                13914.9365234375,
+                17726.666015625,
                 0
             ],
             "min" : [
-                -15770.2607421875,
-                -17731.458984375,
-                -2127
+                -13914.9365234375,
+                -17726.666015625,
+                -3350
             ],
             "type" : "VEC3"
         },
         {
             "bufferView" : 1,
             "componentType" : 5126,
-            "count" : 279,
+            "count" : 245,
             "type" : "VEC3"
         },
         {
             "bufferView" : 2,
             "componentType" : 5126,
-            "count" : 279,
+            "count" : 245,
             "type" : "VEC2"
         },
         {
             "bufferView" : 3,
             "componentType" : 5123,
-            "count" : 1428,
+            "count" : 1260,
             "type" : "SCALAR"
         }
     ],
     "bufferViews" : [
         {
             "buffer" : 0,
-            "byteLength" : 3348,
+            "byteLength" : 2940,
             "byteOffset" : 0
         },
         {
             "buffer" : 0,
-            "byteLength" : 3348,
-            "byteOffset" : 3348
+            "byteLength" : 2940,
+            "byteOffset" : 2940
         },
         {
             "buffer" : 0,
-            "byteLength" : 2232,
-            "byteOffset" : 6696
+            "byteLength" : 1960,
+            "byteOffset" : 5880
         },
         {
             "buffer" : 0,
-            "byteLength" : 2856,
-            "byteOffset" : 8928
+            "byteLength" : 2520,
+            "byteOffset" : 7840
         }
     ],
     "buffers" : [
         {
-            "byteLength" : 11784,
+            "byteLength" : 10360,
             "uri" : "chaiten.bin"
         }
     ]
