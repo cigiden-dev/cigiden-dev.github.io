@@ -119,7 +119,7 @@ $( ".boton-esconder" ).click(function() {
 $( ".zona-norte" ).click(function() {
     $( ".bg-mapa" ).addClass( "zona-norte-bg" );
     $(".zona-norte, .zona-centro, .zona-sur").addClass( "esconder-click" );
-    $( "#amenazas-listado, .texto-zona-centro, .texto-zona-sur").hide(); 
+    $( "#amenazas-listado, .texto-zona-centro, .texto-zona-sur, .zona-centro-menu, .zona-sur-menu").hide(); 
     $( ".bg-mapa" ).removeClass( "zona-centro-bg zona-sur-bg" );
     $( ".texto-zona-norte, .volver-atras, .zona-norte-menu").show();  
     $('html, body').animate(
@@ -134,9 +134,9 @@ $( ".zona-norte" ).click(function() {
 $( ".zona-centro" ).click(function() {
     $( ".bg-mapa" ).addClass( "zona-centro-bg" );
     $(".zona-norte, .zona-centro, .zona-sur").addClass( "esconder-click" );
-    $( "#amenazas-listado, .texto-zona-norte, .texto-zona-sur, .zona-norte-menu").hide(); 
+    $( "#amenazas-listado, .texto-zona-norte, .texto-zona-sur, .zona-norte-menu, .zona-sur-menu").hide(); 
     $( ".bg-mapa" ).removeClass( "zona-norte-bg zona-sur-bg" );
-    $( ".texto-zona-centro, .volver-atras").show();  
+    $( ".texto-zona-centro, .volver-atras, .zona-centro-menu").show();  
     $('html, body').animate(
         {
           scrollTop: $('#titulo-zona').offset().top,
@@ -149,9 +149,9 @@ $( ".zona-centro" ).click(function() {
 $( ".zona-sur" ).click(function() {
     $( ".bg-mapa" ).addClass( "zona-sur-bg" );
     $(".zona-norte, .zona-centro, .zona-sur").addClass( "esconder-click" );
-    $( "#amenazas-listado, .texto-zona-norte, .texto-zona-centro, .zona-norte-menu").hide(); 
+    $( "#amenazas-listado, .texto-zona-norte, .texto-zona-centro, .zona-norte-menu, .zona-centro-menu").hide(); 
     $( ".bg-mapa" ).removeClass( "zona-norte-bg zona-centro-bg" );
-    $( ".texto-zona-sur, .volver-atras").show();  
+    $( ".texto-zona-sur, .volver-atras, .zona-sur-menu").show();  
     $('html, body').animate(
         {
           scrollTop: $('#titulo-zona').offset().top,
@@ -166,7 +166,7 @@ $( ".zona-sur" ).click(function() {
 $( "#titulo-zona" ).click(function() {
     $( "#amenazas-listado").show(); 
     $(".zona-norte, .zona-centro, .zona-sur").removeClass( "esconder-click" );
-    $( ".texto-zona-norte, .texto-zona-centro, .texto-zona-sur, .volver-atras").hide(); 
+    $( ".texto-zona-norte, .texto-zona-centro, .texto-zona-sur, .volver-atras, .zona-norte-menu, .zona-centro-menu, .zona-sur-menu").hide(); 
     $( ".bg-mapa" ).removeClass( "zona-norte-bg zona-centro-bg zona-sur-bg" );  
     $(".texto-zona-norte, .texto-zona-centro, .texto-zona-sur").hide();
     $( ".bg-mapa" ).addClass( "remover-animacion" );
@@ -194,6 +194,42 @@ $( ".anterior-boton-coquimbo" ).click(function() {
     $(this).closest('#coquimbo').find('img.card-img-top').attr("src", "../img/bg-mapa/terremoto.jpg");
     $(this).hide();
     $(".siguiente-boton-coquimbo").show();
+});
+
+$( ".siguiente-boton-valparaiso" ).click(function() {
+    $(this).closest('#valparaiso').find('img.card-img-top').attr("src", "../img/bg-mapa/tsunamis.jpg");
+    $(this).hide();
+    $(".anterior-boton-valparaiso").show();
+});
+
+$( ".anterior-boton-valparaiso" ).click(function() {
+    $(this).closest('#valparaiso').find('img.card-img-top').attr("src", "../img/bg-mapa/terremoto.jpg");
+    $(this).hide();
+    $(".siguiente-boton-valparaiso").show();
+});
+
+$( ".siguiente-boton-maule" ).click(function() {
+    $(this).closest('#maule').find('img.card-img-top').attr("src", "../img/bg-mapa/tsunamis.jpg");
+    $(this).hide();
+    $(".anterior-boton-maule").show();
+});
+
+$( ".anterior-boton-maule" ).click(function() {
+    $(this).closest('#maule').find('img.card-img-top').attr("src", "../img/bg-mapa/terremoto.jpg");
+    $(this).hide();
+    $(".siguiente-boton-maule").show();
+});
+
+$( ".siguiente-boton-los-rios" ).click(function() {
+    $(this).closest('#los-rios').find('img.card-img-top').attr("src", "../img/bg-mapa/tsunamis.jpg");
+    $(this).hide();
+    $(".anterior-boton-los-rios").show();
+});
+
+$( ".anterior-boton-los-rios" ).click(function() {
+    $(this).closest('#los-rios').find('img.card-img-top').attr("src", "../img/bg-mapa/terremoto.jpg");
+    $(this).hide();
+    $(".siguiente-boton-los-rios").show();
 });
 
 $( ".bg-mapa" ).click(function() {
