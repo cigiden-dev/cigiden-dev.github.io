@@ -353,6 +353,7 @@ p{
   height: 1000px;
   -webkit-transition: background-image 0.5s ease-in-out;
   transition: background-image 0.5s ease-in-out;
+
 }
 
 .remover-animacion{
@@ -362,6 +363,10 @@ p{
 
 #titulo-zona:hover{
   opacity: 0.7;
+}
+
+#titulo-zona, .zona-norte, .zona-centro, .zona-sur{
+  cursor: pointer;
 }
 
 .zona-norte-bg{
@@ -385,6 +390,7 @@ p{
   -webkit-transition: none;
   transition: none;
   margin-bottom: 200px;
+  cursor: pointer;
 }
 
 .texto-zona-norte, .texto-zona-centro, .texto-zona-sur{
