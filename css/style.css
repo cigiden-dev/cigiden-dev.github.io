@@ -366,6 +366,12 @@ p{
     font-size: 0.6rem !important;
   }
 
+  .btn-grey:focus{
+    box-shadow: none !important;
+    background-color: #fff !important;
+    color: #38415A !important;
+  }
+
   .text-card > h3{
     font-size: 0.65rem;
   }
@@ -376,6 +382,9 @@ p{
   }
   .siguiente-boton, .anterior-boton{
     top: 135px !important;
+  }
+  .descripcion {
+    font-size: 0.6rem !important;
   }
 
 }
@@ -434,6 +443,10 @@ p{
   width: auto !important;
   cursor: pointer;
   background-color: rgb(235, 235, 235) !important;
+}
+
+.fondo-gris{
+  background-color: #F2F2F2;
 }
 
 .ancho-card{
@@ -512,6 +525,10 @@ p{
 
 .text-card > h3{
   color: #005F80;
+}
+
+.descripcion{
+  font-size: 0.8rem;
 }
 
 .font-w-bold > h3{
