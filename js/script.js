@@ -121,7 +121,7 @@ $( ".zona-norte" ).click(function() {
     $(".zona-norte, .zona-centro, .zona-sur").addClass( "esconder-click" );
     $( "#amenazas-listado, .texto-zona-centro, .texto-zona-sur").hide(); 
     $( ".bg-mapa" ).removeClass( "zona-centro-bg zona-sur-bg" );
-    $( ".texto-zona-norte, .volver-atras").show();  
+    $( ".texto-zona-norte, .volver-atras, .zona-norte-menu").show();  
     $('html, body').animate(
         {
           scrollTop: $('#titulo-zona').offset().top,
@@ -134,7 +134,7 @@ $( ".zona-norte" ).click(function() {
 $( ".zona-centro" ).click(function() {
     $( ".bg-mapa" ).addClass( "zona-centro-bg" );
     $(".zona-norte, .zona-centro, .zona-sur").addClass( "esconder-click" );
-    $( "#amenazas-listado, .texto-zona-norte, .texto-zona-sur").hide(); 
+    $( "#amenazas-listado, .texto-zona-norte, .texto-zona-sur, .zona-norte-menu").hide(); 
     $( ".bg-mapa" ).removeClass( "zona-norte-bg zona-sur-bg" );
     $( ".texto-zona-centro, .volver-atras").show();  
     $('html, body').animate(
@@ -149,7 +149,7 @@ $( ".zona-centro" ).click(function() {
 $( ".zona-sur" ).click(function() {
     $( ".bg-mapa" ).addClass( "zona-sur-bg" );
     $(".zona-norte, .zona-centro, .zona-sur").addClass( "esconder-click" );
-    $( "#amenazas-listado, .texto-zona-norte, .texto-zona-centro").hide(); 
+    $( "#amenazas-listado, .texto-zona-norte, .texto-zona-centro, .zona-norte-menu").hide(); 
     $( ".bg-mapa" ).removeClass( "zona-norte-bg zona-centro-bg" );
     $( ".texto-zona-sur, .volver-atras").show();  
     $('html, body').animate(
@@ -161,6 +161,8 @@ $( ".zona-sur" ).click(function() {
       )
 });
 
+
+
 $( "#titulo-zona" ).click(function() {
     $( "#amenazas-listado").show(); 
     $(".zona-norte, .zona-centro, .zona-sur").removeClass( "esconder-click" );
@@ -168,5 +170,33 @@ $( "#titulo-zona" ).click(function() {
     $( ".bg-mapa" ).removeClass( "zona-norte-bg zona-centro-bg zona-sur-bg" );  
     $(".texto-zona-norte, .texto-zona-centro, .texto-zona-sur").hide();
     $( ".bg-mapa" ).addClass( "remover-animacion" );
+});
+
+$( ".siguiente-boton-arica-parinacota" ).click(function() {
+    $(this).closest('#arica-parinacota').find('img.card-img-top').attr("src", "../img/bg-mapa/tsunamis.jpg");
+    $(this).hide();
+    $(".anterior-boton-arica-parinacota").show();
+});
+
+$( ".anterior-boton-arica-parinacota" ).click(function() {
+    $(this).closest('#arica-parinacota').find('img.card-img-top').attr("src", "../img/bg-mapa/terremoto.jpg");
+    $(this).hide();
+    $(".siguiente-boton-arica-parinacota").show();
+});
+
+$( ".siguiente-boton-coquimbo" ).click(function() {
+    $(this).closest('#coquimbo').find('img.card-img-top').attr("src", "../img/bg-mapa/tsunamis.jpg");
+    $(this).hide();
+    $(".anterior-boton-coquimbo").show();
+});
+
+$( ".anterior-boton-coquimbo" ).click(function() {
+    $(this).closest('#coquimbo').find('img.card-img-top').attr("src", "../img/bg-mapa/terremoto.jpg");
+    $(this).hide();
+    $(".siguiente-boton-coquimbo").show();
+});
+
+$( ".bg-mapa" ).click(function() {
+
 });
 
