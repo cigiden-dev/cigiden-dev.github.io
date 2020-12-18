@@ -370,17 +370,17 @@ p{
 }
 
 .zona-norte-bg{
-  background-image: url(../img/bg-mapa/zona-norte.jpg);
+  background-image: url(../img/bg-mapa/zona-norte.jpg) !important;
   height: 800px;
 }
 
 .zona-centro-bg{
-  background-image: url(../img/bg-mapa/zona-centro.jpg);
+  background-image: url(../img/bg-mapa/zona-centro.jpg) !important;
   height: 600px;
 }
 
 .zona-sur-bg{
-  background-image: url(../img/bg-mapa/zona-sur.jpg);
+  background-image: url(../img/bg-mapa/zona-sur.jpg) !important;
   height: 800px;
 }
 
