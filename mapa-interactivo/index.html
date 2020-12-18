@@ -135,14 +135,27 @@
         </div>
     </div>
 
+    <div class="container position-relative overflow-hidden">
+        <div class="row my-3"> 
+            <div id="titulo-zona" class="col-sm-5 my-5 titulo">
+                    <h1 class="texto-zona-norte">Zona Norte</h1>
+                    <h1 class="texto-zona-centro">Zona Centro</h1>
+                    <h1 class="texto-zona-sur">Zona Sur</h1>
+            </div>
+        </div>
+    </div>
+
     <div class="bg-mapa">
+
         <div class="container">
             <div class="row">
                 <div id="amenazas-listado" class="card my-5">
-                    <div class="card-header todas-amenazas">
-                        Listado amenazas
+                    <div class="card-header">
+                        <span class="todas-amenazas">Listado amenazas</span>
+                        <span style="display:none" class="boton-ver"><img class="icon-sh" src="./show.svg" alt="show"><span class="texto-icon-sh">Ver</span></span>
+                        <span style="display:none" class="boton-esconder"><img class="icon-sh" src="./hide.svg" alt="hide"><span class="texto-icon-sh">Esconder</span></span>
                     </div>
-                    <ul class="list-group list-group-flush">
+                    <ul class="list-group list-group-flush listado-amenazas">
                       <li class="list-group-item volcanes"><img class="img-fluid icono-amenazas" src="../img/bg-mapa/volcanes.svg">Erupciones volcánicas</li>
                       <li class="list-group-item aluviones"><img class="img-fluid icono-amenazas" src="../img/bg-mapa/aluviones.svg">Aluviones</li>
                       <li class="list-group-item terremotos"><img class="img-fluid icono-amenazas" src="../img/bg-mapa/terremotos.svg">Terremotos</li>
@@ -157,6 +170,17 @@
         <div class="bg-load-3"></div>
         <div class="bg-load-4"></div>
         <div class="bg-load-5"></div>
+
+        <div class="bg-load-6"></div>
+        <div class="bg-load-7"></div>
+        <div class="bg-load-8"></div>
+        
+        <div class="zona-norte"></div>
+        <div class="zona-centro"></div>
+        <div class="zona-sur"></div>
+    </div>
+
+    <div>
 
     </div>
 
@@ -217,7 +241,7 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="../js/jquery-3.5.1.slim.min.js"></script>
+    <script src="../js/jquery.min.js"></script>
     <script src="../js/script.js"></script>
     <script>window.jQuery || document.write('<script src="../js/jquery-slim.min.js"><\/script>')</script>
     <script src="../js/popper.min.js"></script>

@@ -88,6 +88,64 @@ $(document).ready(function(){
     
 });
 
+if($(window).width() < 767)
+{
+    $( ".listado-amenazas").hide();
+    $( ".boton-ver").show();
+    $(".zona-norte").css('margin-top','-150px');    
+} else {
+   // change functionality for larger screens
+}
 
+$( ".boton-ver" ).click(function() {
+    $( ".listado-amenazas").show();
+    $( ".boton-ver").hide();
+    $( ".boton-esconder").show();
+    $(".zona-norte").css('margin-top','-400px');
+});
 
+$( ".boton-esconder" ).click(function() {
+    $( ".listado-amenazas").hide();
+    $( ".boton-ver").show();
+    $( ".boton-esconder").hide();
+    $(".zona-norte").css('margin-top','-150px');
+});
 
+$( ".zona-norte" ).click(function() {
+    $( ".bg-mapa" ).addClass( "zona-norte-bg" );
+    $( "#amenazas-listado").hide();   
+    $( ".texto-zona-norte").show();        
+    $('html, body').animate(
+        {
+          scrollTop: $('#titulo-zona').offset().top,
+        },
+        250,
+        'linear'
+      )
+});
+
+$( ".zona-centro" ).click(function() {
+    $( ".bg-mapa" ).addClass( "zona-centro-bg" );
+    $( "#amenazas-listado").hide();    
+    $( ".texto-zona-centro").show();  
+    $('html, body').animate(
+        {
+          scrollTop: $('#titulo-zona').offset().top,
+        },
+        250,
+        'linear'
+      )
+});
+
+$( ".zona-sur" ).click(function() {
+    $( ".bg-mapa" ).addClass( "zona-sur-bg" );
+    $( "#amenazas-listado").hide(); 
+    $( ".texto-zona-sur").show();     
+    $('html, body').animate(
+        {
+          scrollTop: $('#titulo-zona').offset().top,
+        },
+        250,
+        'linear'
+      )
+});

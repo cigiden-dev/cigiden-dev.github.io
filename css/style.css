@@ -349,10 +349,38 @@ p{
   background-image: url(../img/bg-mapa/mapa-1.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: right;
+  background-position: right center;
   height: 1000px;
   -webkit-transition: background-image 0.5s ease-in-out;
   transition: background-image 0.5s ease-in-out;
+}
+
+.zona-norte-bg{
+  background-image: url(../img/bg-mapa/zona-norte.jpg);
+  height: 800px;
+}
+
+.zona-centro-bg{
+  background-image: url(../img/bg-mapa/zona-centro.jpg);
+  height: 600px;
+}
+
+.zona-sur-bg{
+  background-image: url(../img/bg-mapa/zona-sur.jpg);
+  height: 800px;
+}
+
+.zona-norte-bg, .zona-centro-bg, .zona-sur-bg{
+  background-size: contain;
+  background-position: center;
+  -webkit-transition: none;
+  transition: none;
+  margin-bottom: 200px;
+}
+
+.texto-zona-norte, .texto-zona-centro, .texto-zona-sur{
+  display: none;
+  text-decoration: underline;
 }
 
 .bg-load-2{
@@ -369,6 +397,18 @@ p{
 
 .bg-load-5{
   background-image: url(../img/bg-mapa/mapa-5.jpg);
+}
+
+.bg-load-6{
+  background-image: url(../img/bg-mapa/zona-norte.jpg);
+}
+
+.bg-load-7{
+  background-image: url(../img/bg-mapa/zona-centro.jpg);
+}
+
+.bg-load-8{
+  background-image: url(../img/bg-mapa/zona-sur.jpg);
 }
 
 .icono-amenazas{
@@ -404,7 +444,17 @@ p{
 
 }
 
-#amenazas-listado > ul > .list-group-item:hover {
+.icon-sh{
+  height: 30px;
+  margin-left: 10px;
+}
+
+.texto-icon-sh{
+  margin-left: 10px;
+  font-size: 10px;
+}
+
+#amenazas-listado > ul > .list-group-item:hover, .todas-amenazas:hover  {
   opacity: 0.5;
 }
 
@@ -634,3 +684,16 @@ position: absolute;
     position: absolute;
     z-index: 100;
   }
+
+.zona-norte{
+  margin-top: -440px;
+  height: 375px;
+}
+
+.zona-centro{
+  height: 225px;
+}
+
+.zona-sur{
+  height: 400px;
+}
