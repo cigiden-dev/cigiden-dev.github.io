@@ -355,6 +355,15 @@ p{
   transition: background-image 0.5s ease-in-out;
 }
 
+.remover-animacion{
+  -webkit-transition: none !important;
+  transition: none !important;
+}
+
+#titulo-zona:hover{
+  opacity: 0.7;
+}
+
 .zona-norte-bg{
   background-image: url(../img/bg-mapa/zona-norte.jpg);
   height: 800px;
@@ -380,7 +389,13 @@ p{
 
 .texto-zona-norte, .texto-zona-centro, .texto-zona-sur{
   display: none;
-  text-decoration: underline;
+  border-bottom: 5px solid #38415A;
+  padding-bottom: 15px;
+}
+
+.esconder-click{
+  height: 0px !important;
+  margin: 0px !important;
 }
 
 .bg-load-2{

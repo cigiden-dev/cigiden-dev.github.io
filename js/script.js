@@ -1,29 +1,34 @@
 $( ".todas-amenazas" ).click(function() {
     $( ".bg-mapa" ).css('background-image', 'url("' + '../img/bg-mapa/mapa-1.jpg' + '")');
     $(".aluviones, .terremotos, .tsunamis, .volcanes ").css('opacity','1');
+    $( ".bg-mapa" ).removeClass( "remover-animacion" );
 });
 
 $( ".volcanes" ).click(function() {
     $( ".bg-mapa" ).css('background-image', 'url("' + '../img/bg-mapa/mapa-2.jpg' + '")');
     $(".aluviones, .terremotos, .tsunamis, .volcanes ").css('opacity','0.5');
+    $( ".bg-mapa" ).removeClass( "remover-animacion" );
     $(this).css('opacity','1');
 });
 
 $( ".aluviones" ).click(function() {
     $( ".bg-mapa" ).css('background-image', 'url("' + '../img/bg-mapa/mapa-3.jpg' + '")');
     $(".terremotos, .tsunamis, .volcanes ").css('opacity','0.5');
+    $( ".bg-mapa" ).removeClass( "remover-animacion" );
     $(this).css('opacity','1');
 });
 
 $( ".terremotos" ).click(function() {
     $( ".bg-mapa" ).css('background-image', 'url("' + '../img/bg-mapa/mapa-4.jpg' + '")');
     $(".aluviones, .tsunamis, .volcanes ").css('opacity','0.5');
+    $( ".bg-mapa" ).removeClass( "remover-animacion" );
     $(this).css('opacity','1');
 });
 
 $( ".tsunamis" ).click(function() {
     $( ".bg-mapa" ).css('background-image', 'url("' + '../img/bg-mapa/mapa-5.jpg' + '")');
     $(".aluviones, .terremotos, .volcanes ").css('opacity','0.5');
+    $( ".bg-mapa" ).removeClass( "remover-animacion" );
     $(this).css('opacity','1');
 });
 
@@ -113,8 +118,10 @@ $( ".boton-esconder" ).click(function() {
 
 $( ".zona-norte" ).click(function() {
     $( ".bg-mapa" ).addClass( "zona-norte-bg" );
-    $( "#amenazas-listado").hide();   
-    $( ".texto-zona-norte").show();        
+    $(".zona-norte, .zona-centro, .zona-sur").addClass( "esconder-click" );
+    $( "#amenazas-listado, .texto-zona-centro, .texto-zona-sur").hide(); 
+    $( ".bg-mapa" ).removeClass( "zona-centro-bg zona-sur-bg" );
+    $( ".texto-zona-norte, .volver-atras").show();  
     $('html, body').animate(
         {
           scrollTop: $('#titulo-zona').offset().top,
@@ -126,8 +133,10 @@ $( ".zona-norte" ).click(function() {
 
 $( ".zona-centro" ).click(function() {
     $( ".bg-mapa" ).addClass( "zona-centro-bg" );
-    $( "#amenazas-listado").hide();    
-    $( ".texto-zona-centro").show();  
+    $(".zona-norte, .zona-centro, .zona-sur").addClass( "esconder-click" );
+    $( "#amenazas-listado, .texto-zona-norte, .texto-zona-sur").hide(); 
+    $( ".bg-mapa" ).removeClass( "zona-norte-bg zona-sur-bg" );
+    $( ".texto-zona-centro, .volver-atras").show();  
     $('html, body').animate(
         {
           scrollTop: $('#titulo-zona').offset().top,
@@ -139,8 +148,10 @@ $( ".zona-centro" ).click(function() {
 
 $( ".zona-sur" ).click(function() {
     $( ".bg-mapa" ).addClass( "zona-sur-bg" );
-    $( "#amenazas-listado").hide(); 
-    $( ".texto-zona-sur").show();     
+    $(".zona-norte, .zona-centro, .zona-sur").addClass( "esconder-click" );
+    $( "#amenazas-listado, .texto-zona-norte, .texto-zona-centro").hide(); 
+    $( ".bg-mapa" ).removeClass( "zona-norte-bg zona-centro-bg" );
+    $( ".texto-zona-sur, .volver-atras").show();  
     $('html, body').animate(
         {
           scrollTop: $('#titulo-zona').offset().top,
@@ -149,3 +160,13 @@ $( ".zona-sur" ).click(function() {
         'linear'
       )
 });
+
+$( "#titulo-zona" ).click(function() {
+    $( "#amenazas-listado").show(); 
+    $(".zona-norte, .zona-centro, .zona-sur").removeClass( "esconder-click" );
+    $( ".texto-zona-norte, .texto-zona-centro, .texto-zona-sur, .volver-atras").hide(); 
+    $( ".bg-mapa" ).removeClass( "zona-norte-bg zona-centro-bg zona-sur-bg" );  
+    $(".texto-zona-norte, .texto-zona-centro, .texto-zona-sur").hide();
+    $( ".bg-mapa" ).addClass( "remover-animacion" );
+});
+
