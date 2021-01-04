@@ -369,6 +369,10 @@ p{
     height: 1000px !important;
   }
 
+  .video-hablando{
+    width: 35%;
+  }
+
   .logo-footer{
     margin-top: 25px !important;
   }
