@@ -366,7 +366,7 @@ p{
   }
 
   .bg-azul{
-    overflow: unset !important;
+    height: 125vh !important;
   }
 
   .bg-rojo, .bg-tierra, .bg-agua, .bg-amarillo, .bg-naranjo{
@@ -380,7 +380,7 @@ p{
   }
 
   .menu-cuadricula{
-    margin-top: -5rem !important;
+    margin-top: -25rem !important;
   }
 
   .divisor{
