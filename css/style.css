@@ -29,7 +29,7 @@
 
 .bg-cordillera{
   background-image: url(../img/bg-cordillera.jpg);
-  height: 42rem;
+  height: 50rem;
   background-position: center;
   background-size: cover;
 }
@@ -108,8 +108,7 @@ h3{
 }
 
 .divisor{
-  margin-top: -22rem;
-  margin-bottom: ;
+  margin-top: -35rem;
   z-index: 1;
 }
 
@@ -122,12 +121,12 @@ h3{
 }
 
 .cuadricula-2{
-  height: 35rem;
+  height: 50rem;
 }
 
 .menu-cuadricula{
   padding: 0px 10vw 0px 10vw;
-  margin-top: -18rem;
+  margin-top: -15rem;
   z-index: 2;
 }
 
@@ -353,12 +352,50 @@ p{
     height: 25px !important;
   }
 
+  .logo-mobile{
+    width: 50% !important;
+    margin-bottom: 50px;
+  }
+
+  .logo-img-mobile{
+    margin-bottom: -5px !important;
+  }
+
+  .menu-derecha .list-group-item-action {
+    color: #ffffff;
+  }
+
+  .bg-rojo, .bg-tierra, .bg-agua, .bg-amarillo, .bg-naranjo{
+    height: 40vw !important;
+  }
+
+  .bg-cordillera{
+    margin-top: -45rem !important;
+    background-image: none !important;
+  }
+
+  .menu-cuadricula{
+    margin-top: -5rem !important;
+  }
+
+  .divisor{
+    margin-top: -60rem !important;
+  }
+
   .ancho-card{
     width: 100% !important;
   }
 
   .icono-amenazas {
     padding-right: 5px !important;
+  }
+
+  .bg-plomo{
+    height: 105vh !important;
+  }
+
+  .cuadricula-2{
+    height: 70rem !important;
   }
 
   .btn-grey{
