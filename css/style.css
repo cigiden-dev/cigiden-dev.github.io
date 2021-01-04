@@ -365,6 +365,10 @@ p{
     color: #ffffff;
   }
 
+  .bg-azul{
+    overflow: unset !important;
+  }
+
   .bg-rojo, .bg-tierra, .bg-agua, .bg-amarillo, .bg-naranjo{
     height: 40vw !important;
   }
