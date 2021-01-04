@@ -369,6 +369,14 @@ p{
     height: 1000px !important;
   }
 
+  .logo-footer{
+    margin-top: 25px !important;
+  }
+
+  .footer-text{
+    margin-top: 30px !important;
+  }
+
   .bg-rojo, .bg-tierra, .bg-agua, .bg-amarillo, .bg-naranjo{
     height: 40vw !important;
   }
