@@ -343,105 +343,7 @@ p{
 
 }
 
-@media (max-width: 600px) {
-  .cerrar{
-    height: 30px !important;
-  }
 
-  .siguiente-boton, .anterior-boton{
-    height: 25px !important;
-  }
-
-  .logo-mobile{
-    width: 50% !important;
-    margin-bottom: 50px;
-  }
-
-  .logo-img-mobile{
-    margin-bottom: -5px !important;
-  }
-
-  .menu-derecha .list-group-item-action {
-    color: #ffffff;
-  }
-
-  .bg-azul{
-    height: 1000px !important;
-  }
-
-  .video-hablando{
-    width: 35%;
-  }
-
-  .logo-footer{
-    margin-top: 25px !important;
-  }
-
-  .footer-text{
-    margin-top: 30px !important;
-  }
-
-  .bg-rojo, .bg-tierra, .bg-agua, .bg-amarillo, .bg-naranjo{
-    height: 40vw !important;
-  }
-
-  .bg-cordillera{
-    margin-top: -45rem !important;
-    height: 0rem !important;
-    background-image: none !important;
-  }
-
-  .menu-cuadricula{
-    margin-top: -20rem !important;
-  }
-
-  .divisor{
-    margin-top: -60rem !important;
-  }
-
-  .ancho-card{
-    width: 100% !important;
-  }
-
-  .icono-amenazas {
-    padding-right: 5px !important;
-  }
-
-  .bg-plomo{
-    height: 105vh !important;
-  }
-
-  .cuadricula-2{
-    height: 70rem !important;
-  }
-
-  .btn-grey{
-    width: 100% !important;
-    font-size: 0.6rem !important;
-  }
-
-  .btn-grey:focus{
-    box-shadow: none !important;
-    background-color: #fff !important;
-    color: #38415A !important;
-  }
-
-  .text-card > h3{
-    font-size: 0.65rem;
-  }
-
-  .font-w-light > h3{
-    font-size: 0.6rem !important;
-    line-height: 0.8rem !important;
-  }
-  .siguiente-boton, .anterior-boton{
-    top: 135px !important;
-  }
-  .descripcion {
-    font-size: 0.6rem !important;
-  }
-
-}
 
 .overflow-hidden { overflow: hidden; }
 
@@ -909,4 +811,113 @@ position: absolute;
 
 .zona-sur{
   height: 400px;
+}
+
+@media (max-width: 600px) {
+  .cerrar{
+    height: 30px !important;
+  }
+
+  .container-icono-3d {
+    z-index: 0 !important;
+  }
+
+  canvas{
+    height: 100% !important;
+    width: 100% !important;
+  }
+
+  .siguiente-boton, .anterior-boton{
+    height: 25px !important;
+  }
+
+  .logo-mobile{
+    width: 50% !important;
+    margin-bottom: 50px;
+  }
+
+  .logo-img-mobile{
+    margin-bottom: -5px !important;
+  }
+
+  .menu-derecha .list-group-item-action {
+    color: #ffffff;
+  }
+
+  .bg-azul{
+    height: 1000px !important;
+  }
+
+  .video-hablando{
+    width: 35%;
+  }
+
+  .logo-footer{
+    margin-top: 25px !important;
+  }
+
+  .footer-text{
+    margin-top: 30px !important;
+  }
+
+  .bg-rojo, .bg-tierra, .bg-agua, .bg-amarillo, .bg-naranjo{
+    height: 40vw !important;
+  }
+
+  .bg-cordillera{
+    margin-top: -45rem !important;
+    height: 0rem !important;
+    background-image: none !important;
+  }
+
+  .menu-cuadricula{
+    margin-top: -20rem !important;
+  }
+
+  .divisor{
+    margin-top: -60rem !important;
+  }
+
+  .ancho-card{
+    width: 100% !important;
+  }
+
+  .icono-amenazas {
+    padding-right: 5px !important;
+  }
+
+  .bg-plomo{
+    height: 105vh !important;
+  }
+
+  .cuadricula-2{
+    height: 70rem !important;
+  }
+
+  .btn-grey{
+    width: 100% !important;
+    font-size: 0.6rem !important;
+  }
+
+  .btn-grey:focus{
+    box-shadow: none !important;
+    background-color: #fff !important;
+    color: #38415A !important;
+  }
+
+  .text-card > h3{
+    font-size: 0.65rem;
+  }
+
+  .font-w-light > h3{
+    font-size: 0.6rem !important;
+    line-height: 0.8rem !important;
+  }
+  .siguiente-boton, .anterior-boton{
+    top: 135px !important;
+  }
+  .descripcion {
+    font-size: 0.6rem !important;
+  }
+
 }
