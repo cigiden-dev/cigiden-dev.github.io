@@ -134,6 +134,11 @@ h3{
   background-color: #F0501D;
 }
 
+.bg-rojo-footer{
+  background-color: #F0501D;
+  height: auto !important;
+}
+
 .bg-naranjo{
  background-color: #E38200;
 }
@@ -920,4 +925,13 @@ position: absolute;
     font-size: 0.6rem !important;
   }
 
+}
+
+.titulo-pregunta {
+  font-size: 1.25rem !important;
+  text-align: center;
+}
+
+.audio-pregunta {
+  width: 100%;
 }
