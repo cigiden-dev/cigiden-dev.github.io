@@ -169,16 +169,6 @@ form {
   overflow: hidden;
 }
 
-.comienza-explorar-div a{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  text-indent: -9999px; 
-  overflow: hidden;
-}
-
 .dropdown-item{
   color: #38415A;
   font-family: 'Futura LT Bold';
@@ -662,6 +652,10 @@ canvas{
   cursor: pointer;
 }
 
+.simulaciones-boton {
+  font-size: 0.75rem !important;
+}
+
 
 
 /* BOTON INICIO */
@@ -923,6 +917,10 @@ position: absolute;
   }
   .descripcion {
     font-size: 0.6rem !important;
+  }
+
+  .dropdown-menu-sec {
+    margin-top: 30px !important;
   }
 
 }
