@@ -161,6 +161,16 @@ $( ".zona-sur" ).click(function() {
       )
 });
 
+$( ".click-comienza-explorar" ).click(function() {
+    $('html, body').animate(
+        {
+          scrollTop: $('.bg-mapa').offset().top,
+        },
+        250,
+        'linear'
+      )
+});
+
 
 
 $( "#titulo-zona" ).click(function() {
