@@ -224,6 +224,10 @@ p{
   margin-bottom: 25px;
 }
 
+.tab-pane p{
+  text-align: justify;
+}
+
 .menu-derecha .list-group-item-action {
   background-color: transparent;
   border-color: transparent;
