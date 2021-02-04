@@ -197,7 +197,7 @@ form {
 }
 
 .footer-text > div > h2 {
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 
 .footer-text > div > h3 {
@@ -274,7 +274,8 @@ p{
 .contacto a{
   color: #fff;
   opacity: 0.8;
-  font-size: 0.7rem;
+  font-size: 0.85rem;
+  line-height: 25px;
 }
 
 .contacto a:hover{
@@ -603,12 +604,12 @@ p{
 }
 
 .img-logo-fluid{
-  height: 65px;
+  height: 180px;
   width: auto;
 }
 
 .social-media-txt h2{
-  font-size: 0.8rem !important;
+  font-size: 1rem !important;
   margin-bottom: 3px;
 }
 
