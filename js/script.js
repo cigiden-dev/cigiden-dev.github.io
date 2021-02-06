@@ -69,11 +69,11 @@ $( ".click-villarica" ).click(function() {
     pauseVideosAudios("video-villarica");   
 });
 
-$( "#canvas, #canvas-cartagena, #canvas-talcahuano, #canvas-iquique, #canvas-volcan, #canvas-villarica, #canvas-chaiten" ).click(function() {
+$( "#canvas, #canvas-cartagena, #canvas-talcahuano, #canvas-iquique, #canvas-volcan, #canvas-villarica, #canvas-chaiten, #canvas-tsunami" ).click(function() {
     $(this).find("div:first").hide(1500);
 });
 
-$("#canvas, #canvas-cartagena, #canvas-talcahuano, #canvas-iquique, #canvas-volcan, #canvas-villarica, #canvas-chaiten").on("tap",function(){
+$("#canvas, #canvas-cartagena, #canvas-talcahuano, #canvas-iquique, #canvas-volcan, #canvas-villarica, #canvas-chaiten, #canvas-tsunami").on("tap",function(){
     $(this).find("div:first").hide(1500);
 });
 
