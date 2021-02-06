@@ -124,7 +124,11 @@
             </div>
             <div id="valparaiso" class="row">
                 <div class="col-sm-4 my-1 text-center p-descripcion">
-                    <video autoplay id="video-valparaiso" class="video-hablando" width="100%" height="auto" controls style="outline: none;" controlsList="nofullscreen nodownload noremoteplayback">
+                    <video autoplay id="video-valparaiso" class="video-hablando" width="100%" controls height="auto" style="outline: none;" controlsList="nofullscreen nodownload noremoteplayback">
+                        <script>
+                            var video = document.currentScript.parentElement;
+                            video.volume = 0.3;
+                        </script>
                     <source src="valparaiso.mp4" type="video/mp4">                    
                     </video>
                     <p class="nombre-investigador font-weight-bold">Patricio Catalán</p>
@@ -193,7 +197,12 @@
             <div id="cartagena" class="row" style="display: none;">
                 <div class="col-sm-4 my-1 text-center p-descripcion">
                     <video id="video-cartagena" class="video-hablando" width="100%" height="auto" controls style="outline: none;" controlsList="nofullscreen nodownload noremoteplayback">
-                    <source src="cartagena.mp4" type="video/mp4">                    
+                        <script>
+                            var video = document.currentScript.parentElement;
+                            video.volume = 0.5;
+                        </script>
+
+                        <source src="cartagena.mp4" type="video/mp4">                    
                     </video>
                     <p class="nombre-investigador font-weight-bold">Alejandra Gubler</p>
                     <p class="nombre-investigador">Académico USM</p>
