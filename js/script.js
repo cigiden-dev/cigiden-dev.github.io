@@ -173,6 +173,16 @@ $( ".zona-sur" ).click(function() {
       )
 });
 
+$( ".muestra-virtual" ).click(function() {
+    $('html, body').animate(
+        {
+          scrollTop: $('#muestra-virtual-descarga').offset().top-200,
+        },
+        250,
+        'linear'
+      )
+});
+
 $( ".click-comienza-explorar" ).click(function() {
     $('html, body').animate(
         {
