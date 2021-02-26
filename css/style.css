@@ -210,7 +210,7 @@ h4{
   color: #F0501D;
 }
 
-p{
+p, .requerimientos > li{
   font-family: 'Futura LT Regular';
   font-size: 0.75rem;
   color: #38415A;
