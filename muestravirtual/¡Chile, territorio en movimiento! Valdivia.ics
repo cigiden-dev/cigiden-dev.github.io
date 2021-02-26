@@ -27,7 +27,7 @@ UID:20210104T170814Z-1191279006@marudot.com
 DTSTART;VALUE=DATE:20210522
 DTEND;VALUE=DATE:20210523
 SUMMARY:¡Chile\, territorio en movimiento! Valdivia
-DESCRIPTION:Fecha: 22 de mayo\, conmemoración Terremoto de Valdivia.\nEntidad asociada: Cyclos y Municipalidad de Valdivia.\nActividad lanzamiento regional: Conversatorio científico ciudadano: Diálogo entre tomadores de decisión\, científicos y dirigentes sociales en torno a la gestión del riesgo y escenarios de aluviones\nParticipantes: Alcalde de Valdivia\, investigadores CIGIDEN (Felipe Aguilera y Patricio Winckler y/o Marcos Moreno)\, representante Cyclos\, y Fundación Proyecta Memoria.
+DESCRIPTION:Fecha: 22 de mayo\, conmemoración Terremoto de Valdivia.\nEntidad asociada: Cyclos y Municipalidad de Valdivia.\nActividad lanzamiento regional: Conversatorio científico ciudadano: Diálogo entre tomadores de decisión\, científicos y dirigentes sociales en torno a la gestión del riesgo y escenarios de aluviones\nParticipantes: Alcalde de Valdivia\, investigadores CIGIDEN (Felipe Aguilera y Patricio Winckler y/o Marcos Moreno)\, representante Cyclos\.
 LOCATION:Valdivia
 BEGIN:VALARM
 ACTION:DISPLAY
